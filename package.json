@@ -1,18 +1,14 @@
 {
-  "name": "portfolio-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "rollup --config --watch"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "rollup": "^4.17.2"
-  },
-  "dependencies": {
-    "rollup-plugin-serve": "^1.1.1"
+    "vite": "^5.2.0"
   }
 }
