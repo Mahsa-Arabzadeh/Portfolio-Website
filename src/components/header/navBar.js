@@ -32,8 +32,6 @@ function navBarGenerator() {
     })),
   });
 
-  console.log(navBar);
-
   return navBar;
 }
 
