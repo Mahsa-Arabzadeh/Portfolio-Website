@@ -1,8 +1,10 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 
 const dataLang = [
   {
-    svgSrc: "/images/Grouparrow.svg",
+    svgArrow: "/images/Grouparrow.svg",
   },
   {
     languages: [
@@ -19,6 +21,8 @@ const dataLang = [
   },
 ];
 
+// find method
+
 function selectLang() {
   const langSelect = domGenerator({
     tag: "div",
@@ -28,11 +32,7 @@ function selectLang() {
         tag: "img",
         attributes: {
           class: "select-svg",
-          src: dataLang.forEach((item) => {
-            if (item.svgSrc) {
-              return item.svgSrc;
-            } else null;
-          }),
+          src: dataLang[0].svgArrow,
         },
       },
       {
@@ -53,19 +53,11 @@ function selectLang() {
     ],
   });
 
-  console.log(langSelect);
-
   return langSelect;
 }
 
-function optionLang(language) {
-  const options = domGenerator({
-    tag: "option",
-    attributes: { class: "option-lang" },
-    properties: { textContent: language },
-  });
-
-  return options;
-}
-
 export default selectLang;
+
+// TODO:
+// create a select tag ✔
+// write jsdoc comments
