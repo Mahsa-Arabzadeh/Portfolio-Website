@@ -19,14 +19,21 @@ const dataLang = [
   },
 ];
 
-function selectLang(dataLang) {
+function selectLang() {
   const langSelect = domGenerator({
     tag: "div",
     attributes: { class: "lang-container" },
     children: [
       {
         tag: "img",
-        attributes: { class: "select-svg", src: dataLang.svgSrc },
+        attributes: {
+          class: "select-svg",
+          src: dataLang.forEach((item) => {
+            if (item.svgSrc) {
+              return item.svgSrc;
+            } else null;
+          }),
+        },
       },
       {
         tag: "select",
