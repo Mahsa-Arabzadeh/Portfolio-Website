@@ -1,6 +1,8 @@
 import domGenerator from "dom-generator";
 import selectLang from "./language";
 import navBarGenerator from "./navBar";
+import headerLogo from "./headerLogo";
+import { logoData } from "./headerLogo";
 
 function headerGenerator() {
   const headerGenerator = domGenerator({
@@ -8,7 +10,10 @@ function headerGenerator() {
     attributes: { id: "header" },
     children: [
       {
-        tag: "logo",
+        tag: headerLogo(
+          logoData.map((item) => item.name).join(""),
+          logoData.map((item) => item.logoSvg).join("")
+        ),
       },
       {
         tag: "div",
@@ -33,4 +38,5 @@ function headerGenerator() {
 export default headerGenerator;
 // todo:
 // create header generator function ✔
-// style to header
+// style to header ✔
+// create logo part
