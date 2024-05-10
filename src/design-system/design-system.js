@@ -7,5 +7,6 @@ import heroSection from "../components/heroSection/heroSection";
 
 const body = document.body;
 body.appendChild(headerGenerator());
+body.appendChild(heroSection());
 headerLogo();
 heroSection();

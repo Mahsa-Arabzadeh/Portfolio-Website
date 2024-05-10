@@ -1,0 +1,11 @@
+@import "mixin";
+
+.hero-section{
+    height: 423px;
+    background-color: red;
+    @include display(flex,space-between,center);
+    .introduction-hero{
+        background-color: pink;
+    }
+}
+
