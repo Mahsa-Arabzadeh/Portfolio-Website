@@ -15,13 +15,13 @@ function headerLogo(name, logoSvg) {
     attributes: { class: "logo-container" },
     children: [
       {
+        tag: "img",
+        attributes: { class: "logo-svg", src: logoSvg },
+      },
+      {
         tag: "div",
         attributes: { class: "logo-name" },
         properties: { textContent: name },
-      },
-      {
-        tag: "img",
-        attributes: { class: "logo-svg", src: logoSvg },
       },
     ],
   });

@@ -39,4 +39,5 @@ export default headerGenerator;
 // todo:
 // create header generator function ✔
 // style to header ✔
-// create logo part
+// create logo part ✔
+// style to logo
