@@ -2,7 +2,7 @@ import domGenerator from "dom-generator";
 
 export const logoData = [
   {
-    name: "M.A",
+    name: "Mah",
   },
   {
     logoSvg: "/images/Logo.svg",
