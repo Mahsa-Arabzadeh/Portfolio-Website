@@ -3,9 +3,9 @@
 import domGenerator from "dom-generator";
 
 const dataLang = [
-  {
-    svgArrow: "/images/Grouparrow.svg",
-  },
+  // {
+  //   svgArrow: "/images/Grouparrow.svg",
+  // },
   {
     languages: [
       {
@@ -13,9 +13,6 @@ const dataLang = [
       },
       {
         language: "IR",
-      },
-      {
-        language: "UA",
       },
     ],
   },
@@ -28,20 +25,20 @@ function selectLang() {
     tag: "div",
     attributes: { class: "lang-container" },
     children: [
-      {
-        tag: "img",
-        attributes: {
-          class: "select-svg",
-          src: dataLang[0].svgArrow,
-        },
-      },
+      // {
+      //   tag: "img",
+      //   attributes: {
+      //     class: "select-svg",
+      //     src: dataLang[0].svgArrow,
+      //   },
+      // },
       {
         tag: "select",
         attributes: { class: "select-lang" },
         children: dataLang.flatMap((item) => {
           if (item.languages) {
             return item.languages.map((lang) => ({
-              tag: "span",
+              tag: "option",
               attributes: { class: "lang-item" },
               properties: { textContent: lang.language },
             }));

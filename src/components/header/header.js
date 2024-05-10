@@ -15,10 +15,10 @@ function headerGenerator() {
         attributes: { class: "nav-container" },
         children: [
           {
-            tag: selectLang(),
+            tag: navBarGenerator(),
           },
           {
-            tag: navBarGenerator(),
+            tag: selectLang(),
           },
         ],
       },
