@@ -1,6 +1,7 @@
 import domGenerator from "dom-generator";
 import introductionHero from "./Introduction";
 import heroImage from "./heroImage";
+import { heroData } from "./heroImage";
 
 function heroSection() {
   const heroSection = domGenerator({
@@ -11,7 +12,12 @@ function heroSection() {
         tag: introductionHero(),
       },
       {
-        tag: heroImage(),
+        tag: heroImage(
+          heroData.map(
+            (data) => data.shapePurple,
+            heroData.map((data) => data.shapeDoted)
+          )
+        ),
       },
     ],
   });
