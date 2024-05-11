@@ -6,14 +6,19 @@ function introductionHero() {
     attributes: { class: "introduction-hero" },
     children: [
       {
-        tag: "div",
+        tag: "h1",
         attributes: { class: "introduction-title" },
-        properties: { textContent: "mahsa" },
+        properties: {
+          textContent: `${"mahsa"} is a ${"web developer"} and ${"designer"}`,
+        },
       },
       {
-        tag: "div",
-        attributes: { class: "introduction-title" },
-        properties: { textContent: "mahsa" },
+        tag: "p",
+        attributes: { class: "introduction-p" },
+        properties: {
+          textContent:
+            "He crafts responsive websites where technologies meet creativity He crafts responsive websites where technologies meet creativity",
+        },
       },
     ],
   });

@@ -3,9 +3,26 @@
 .hero-section{
     height: 423px;
     background-color: red;
+    padding: 60px 0px;
     @include display(flex,space-between,center);
     .introduction-hero{
+        width: 537px;
+        height: 227px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
         background-color: pink;
+        .introduction-title{
+            font-size: 32px;
+            word-spacing: 7px;
+            line-height: 36px;
+        }
+        .introduction-p{
+            height: 50px;
+            font-size: 16px;
+            line-height: 25px;
+            word-spacing: 3px;
+            line-height: 20px;
+        }
     }
 }
-

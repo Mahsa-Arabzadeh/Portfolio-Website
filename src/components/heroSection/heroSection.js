@@ -1,5 +1,6 @@
 import domGenerator from "dom-generator";
 import introductionHero from "./Introduction";
+import heroImage from "./heroImage";
 
 function heroSection() {
   const heroSection = domGenerator({
@@ -8,6 +9,9 @@ function heroSection() {
     children: [
       {
         tag: introductionHero(),
+      },
+      {
+        tag: heroImage(),
       },
     ],
   });
