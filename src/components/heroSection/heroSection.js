@@ -1,7 +1,7 @@
 import domGenerator from "dom-generator";
 import introductionHero from "./Introduction";
 import heroImage from "./heroImage";
-import { heroData } from "./heroImage";
+import heroData from "./data";
 
 function heroSection() {
   const heroSection = domGenerator({
