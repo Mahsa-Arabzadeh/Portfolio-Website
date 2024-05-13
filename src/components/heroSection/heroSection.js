@@ -12,12 +12,7 @@ function heroSection() {
         tag: introductionHero(),
       },
       {
-        tag: heroImage(
-          heroData.map(
-            (data) => data.shapePurple,
-            heroData.map((data) => data.shapeDoted)
-          )
-        ),
+        tag: heroImage(),
       },
     ],
   });

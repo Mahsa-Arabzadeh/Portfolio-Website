@@ -1,9 +1,9 @@
 const heroData = [
   {
-    shapePurple: "/image/LogoPurple.svg",
+    shapePurple: "/image/Logo.svg",
   },
   {
-    shapeDoted: "/image/DotsShape.svg",
+    shapeDoted: "/image/Logo.svg",
   },
 ];
 
