@@ -5,6 +5,9 @@ const heroData = [
   {
     shapeDoted: "/images/DotsShape.svg",
   },
+  {
+    profileImage: "/images/Imagehero.svg",
+  },
 ];
 
 export default heroData;

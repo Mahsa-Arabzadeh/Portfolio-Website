@@ -1,7 +1,7 @@
 import domGenerator from "dom-generator";
 
 function heroImage(heroData) {
-  let { shapePurple, shapeDoted } = heroData;
+  let { shapePurple, shapeDoted, profileImage } = heroData;
 
   const heroImage = domGenerator({
     tag: "div",
@@ -9,8 +9,19 @@ function heroImage(heroData) {
     children: [
       {
         tag: "div",
-        attributes: { class: "image-part" },
+        attributes: {
+          class: "image-part",
+        },
         children: [
+          {
+            tag: "img",
+            attributes: {
+              class: "profile-image",
+              src: (profileImage = heroData
+                .map((item) => item.profileImage)
+                .join("")),
+            },
+          },
           {
             tag: "img",
             attributes: {
@@ -38,7 +49,6 @@ function heroImage(heroData) {
     ],
   });
 
-  console.log(heroImage);
   return heroImage;
 }
 
