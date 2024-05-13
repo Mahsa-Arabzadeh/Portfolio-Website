@@ -12,7 +12,7 @@ function heroSection() {
         tag: introductionHero(),
       },
       {
-        tag: heroImage(),
+        tag: heroImage(heroData),
       },
     ],
   });

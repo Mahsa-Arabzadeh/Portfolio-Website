@@ -1,7 +1,8 @@
 import domGenerator from "dom-generator";
-import heroData from "./data";
 
-function heroImage() {
+function heroImage(heroData) {
+  let { shapePurple, shapeDoted } = heroData;
+
   const heroImage = domGenerator({
     tag: "div",
     attributes: { class: "hero-image" },
@@ -14,14 +15,18 @@ function heroImage() {
             tag: "img",
             attributes: {
               class: "shape-purple",
-              src: heroData.map((data) => data.shapePurple).join(""),
+              src: (shapePurple = heroData
+                .map((item) => item.shapePurple)
+                .join("")),
             },
           },
           {
             tag: "img",
             attributes: {
               class: "shape-doted",
-              src: heroData.map((data) => data.shapeDoted).join(""),
+              src: (shapeDoted = heroData
+                .map((item) => item.shapeDoted)
+                .join("")),
             },
           },
         ],
