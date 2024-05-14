@@ -1,0 +1,38 @@
+@import "mixin";
+
+
+
+// style to top section of projects: 
+.projects-section{
+    background-color: red;
+    height: 518px;
+    @include display(flex,start,center);
+    flex-direction: column;
+    .project-sec-top{
+        @include display(flex,space-between,center);
+        width: 100%;
+        .left-part{
+            @include display(flex,space-between,center);
+            width: 730px;
+            .title-sec-part{
+                @include display(flex,start,center);
+                font-size: 32px;
+                .sharp-shape{
+                    color: #C778DD;
+                }
+                .title-sec{
+                    color: #fff;
+                }
+            }
+            .line-head{
+                width: 543px;
+                height: 5px;
+                background-color: #C778DD;
+            }
+        }
+        .arrow-right{
+            cursor: pointer;
+        }
+    }
+}
+

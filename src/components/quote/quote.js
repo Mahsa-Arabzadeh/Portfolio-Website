@@ -70,3 +70,6 @@ function randomQuote(props) {
 }
 
 export default randomQuote;
+
+// todo:
+// ? we can use api for random quote.
