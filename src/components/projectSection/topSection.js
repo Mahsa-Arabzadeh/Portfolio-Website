@@ -1,5 +1,5 @@
 import domGenerator from "dom-generator";
-import projectsData from "./data";
+import { projectsData } from "./data";
 
 function topSeciton(props) {
   let { title, arrowRight } = props;

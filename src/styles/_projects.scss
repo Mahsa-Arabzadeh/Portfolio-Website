@@ -4,9 +4,9 @@
 
 // style to top section of projects: 
 .projects-section{
-    background-color: red;
-    height: 518px;
     @include display(flex,start,center);
+    height: 518px;
+    gap: 48px;
     flex-direction: column;
     .project-sec-top{
         @include display(flex,space-between,center);
@@ -33,6 +33,13 @@
         .arrow-right{
             cursor: pointer;
         }
+    }
+
+
+    // project main part:
+    .project-sec-main{
+        @include display(flex,center,center);
+        gap: 16px;
     }
 }
 

@@ -1,6 +1,7 @@
 import domGenerator from "dom-generator";
 import topSeciton from "./topSection";
-import projectsData from "./data";
+import { projectsData } from "./data";
+import mainProjects from "./mainProject";
 
 function projectSection() {
   const projectSection = domGenerator({
@@ -11,8 +12,7 @@ function projectSection() {
         tag: topSeciton(projectsData),
       },
       {
-        tag: "div",
-        attributes: { class: "project-sec-main" },
+        tag: mainProjects(),
       },
     ],
   });
