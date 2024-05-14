@@ -7,9 +7,10 @@ function introductionHero() {
     children: [
       {
         tag: "h1",
+        dataAttributes: { SemiBold: "SemiBold" },
         attributes: { class: "introduction-title" },
         properties: {
-          textContent: `${"mahsa"} is a ${"web developer"} and ${"designer"}`,
+          textContent: `${"mahsa"} is a ${"web developer"}`,
         },
       },
       {
