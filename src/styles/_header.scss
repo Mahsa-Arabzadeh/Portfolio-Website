@@ -1,11 +1,15 @@
 
 
 #header{
+    width: 100%;
     padding: 0px 190px;
     height: 55px;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    background-color: #282C33;
     .logo-container{
         display: flex;
         justify-content: space-between;
