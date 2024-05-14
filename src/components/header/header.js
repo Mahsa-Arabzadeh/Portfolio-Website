@@ -30,14 +30,7 @@ function headerGenerator() {
     ],
   });
 
-  console.log(headerGenerator);
-
   return headerGenerator;
 }
 
 export default headerGenerator;
-// todo:
-// create header generator function ✔
-// style to header ✔
-// create logo part ✔
-// style to logo

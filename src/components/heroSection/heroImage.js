@@ -48,7 +48,7 @@ function heroImage(heroData) {
         children: [
           {
             tag: "div",
-            dataAttributes: { color: "base-color" },
+            dataAttributes: { basecolor: "base-color" },
             attributes: { class: "squar-color" },
           },
           {

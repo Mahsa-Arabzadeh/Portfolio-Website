@@ -3,3 +3,27 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
+
+// Both elements' data attribute is equal to baseColor,
+//  so just check them under the condition that if it contains the number 100,
+//  color only that element, but if it contains the number 200, color its background.
+// @mixin baseColor($type) {
+//     @mixin color($color){
+//         @if $type == "color" {
+//             color: $color;
+//         }
+//         @else if $type == "background" {
+//             background-color: $color;
+//         }
+//     }
+// }
+
+// [data-basecolor='base-color'] {
+//     $color: blue;
+//    @include baseColor($color);
+// }
+
+// body{
+//     @include baseColor("color")
+// }

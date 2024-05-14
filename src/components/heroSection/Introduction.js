@@ -1,6 +1,8 @@
 import domGenerator from "dom-generator";
+import heroData from "./data";
 
-function introductionHero() {
+function introductionHero(props) {
+  let { skill } = props;
   const introduction = domGenerator({
     tag: "div",
     attributes: { class: "introduction-hero" },
@@ -10,8 +12,19 @@ function introductionHero() {
         dataAttributes: { SemiBold: "SemiBold" },
         attributes: { class: "introduction-title" },
         properties: {
-          textContent: `${"mahsa"} is a ${"web developer"}`,
+          textContent: `Im a `,
         },
+        children: [
+          {
+            tag: "span",
+            attributes: { class: "colorPurpleSpan" },
+            properties: {
+              textContent: (skill = heroData
+                .map((data) => data.skill)
+                .join("")),
+            },
+          },
+        ],
       },
       {
         tag: "p",

@@ -15,6 +15,9 @@
             font-size: 32px;
             word-spacing: 7px;
             line-height: 36px;
+            .colorPurpleSpan{
+                color: #C778DD;
+            }
         }
         .introduction-p{
             height: 50px;
@@ -61,14 +64,13 @@
         .currently-work{
             @include display(flex,start,center);
             border: 1px solid #ABB2BF;
-            width: 402px;
             height: 37px;
             padding: 4px 12px;
             gap: 10px;
             .squar-color{
                 width: 16px;
                 height: 16px;
-                background-color: rgb(255, 130, 251);
+                background-color: #C778DD;
             }
         }
     }

@@ -42,6 +42,7 @@ function listNavGenerator(textItem) {
     children: [
       {
         tag: "span",
+        dataAttributes: { basecolor: "base-color" },
         attributes: { class: "sharp-nav" },
         properties: { textContent: "#" },
       },

@@ -9,7 +9,7 @@ function heroSection() {
     attributes: { class: "hero-section" },
     children: [
       {
-        tag: introductionHero(),
+        tag: introductionHero(heroData),
       },
       {
         tag: heroImage(heroData),
