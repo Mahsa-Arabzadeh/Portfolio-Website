@@ -1,0 +1,32 @@
+@import "mixin";
+
+.quote-section{
+    @include display(flex,center,center);
+    flex-direction: column;
+    padding: 80px 0px;
+    .border-container{
+        @include display(flex,center,end);
+        flex-direction: column;
+    }
+    .quote-border{
+        position: relative;
+        padding: 24px 26px;
+        border: 1px solid #ABB2BF;
+        color: #fff;
+        .quote-svg-top{
+            background-color: #282C33;
+            position: absolute;
+            top: -22px;
+            left: 12px;
+            padding: 8px;
+        }
+        .quote-svg-bottom{
+            background-color: #282C33;
+            z-index: 2;
+            position: absolute;
+            top: -22px;
+            right: 20px;
+            padding: 8px;
+        }
+    }
+}

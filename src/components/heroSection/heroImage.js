@@ -59,6 +59,7 @@ function heroImage(heroData) {
           {
             tag: "div",
             dataAttributes: { SemiBold: "SemiBold" },
+            attributes: { class: "working-on" },
             properties: {
               textContent: (workOn = heroData
                 .map((data) => data.workOn)
