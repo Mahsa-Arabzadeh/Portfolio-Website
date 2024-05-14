@@ -8,6 +8,9 @@ const heroData = [
   {
     profileImage: "/images/Imagehero.svg",
   },
+  {
+    workOn: "React",
+  },
 ];
 
 export default heroData;

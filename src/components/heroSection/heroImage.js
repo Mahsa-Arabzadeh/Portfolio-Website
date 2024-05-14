@@ -1,7 +1,7 @@
 import domGenerator from "dom-generator";
 
 function heroImage(heroData) {
-  let { shapePurple, shapeDoted, profileImage } = heroData;
+  let { shapePurple, shapeDoted, profileImage, workOn } = heroData;
 
   const heroImage = domGenerator({
     tag: "div",
@@ -45,6 +45,27 @@ function heroImage(heroData) {
       {
         tag: "div",
         attributes: { class: "currently-work" },
+        children: [
+          {
+            tag: "div",
+            dataAttributes: { color: "base-color" },
+            attributes: { class: "squar-color" },
+          },
+          {
+            tag: "div",
+            dataAttributes: { medium: "medium" },
+            properties: { textContent: "Currently working on" },
+          },
+          {
+            tag: "div",
+            dataAttributes: { SemiBold: "SemiBold" },
+            properties: {
+              textContent: (workOn = heroData
+                .map((data) => data.workOn)
+                .join("")),
+            },
+          },
+        ],
       },
     ],
   });

@@ -17,13 +17,7 @@ function heroSection() {
     ],
   });
 
-  console.log(heroSection);
-
   return heroSection;
 }
 
 export default heroSection;
-
-// todo:
-// create Introduction part ✔
-// style to introduction part

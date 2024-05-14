@@ -24,7 +24,7 @@
             line-height: 20px;
         }
     }
-
+    // profile part:
     .hero-image{
         width: 470px;
         height: 100%;
@@ -55,6 +55,20 @@
                 position: absolute;
                 top: 230px;
                 left: 0;
+            }
+        }
+        // currently working on 
+        .currently-work{
+            @include display(flex,start,center);
+            border: 1px solid #ABB2BF;
+            width: 402px;
+            height: 37px;
+            padding: 4px 12px;
+            gap: 10px;
+            .squar-color{
+                width: 16px;
+                height: 16px;
+                background-color: rgb(255, 130, 251);
             }
         }
     }
