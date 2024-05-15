@@ -20,13 +20,12 @@ function render(...elements) {
     attributes: { class: "container" },
   });
 
-  const render = elements.forEach((element) => {
-    container.appendChild(element);
-  });
-
   main.appendChild(container);
   document.body.appendChild(main);
-  return render;
+
+  return (render = elements.forEach((element) => {
+    container.appendChild(element);
+  }));
 }
 
 export { prepend, render };
