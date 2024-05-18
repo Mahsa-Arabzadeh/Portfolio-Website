@@ -11,7 +11,13 @@ function projectSection() {
     attributes: { class: "projects-section" },
     children: [
       {
-        tag: topSeciton(projectsData),
+        tag: "div",
+        attributes: { class: "project-sec-top" },
+        children: [
+          {
+            tag: topSeciton(projectsData),
+          },
+        ],
       },
       {
         tag: mainProjects(),
