@@ -6,7 +6,7 @@ import { projects } from "./data";
 function cards(props) {
   let { bannerProject, tools, title, paragraph } = props;
 
-  const cards = domGenerator({
+  return domGenerator({
     tag: "div",
     attributes: { class: "card-project" },
     children: [
@@ -40,8 +40,6 @@ function cards(props) {
       },
     ],
   });
-
-  return cards;
 }
 
 function mainProjects() {

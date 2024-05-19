@@ -30,9 +30,6 @@
                 background-color: #C778DD;
             }
         }
-        .arrow-right{
-            cursor: pointer;
-        }
     }
 
 
@@ -40,6 +37,6 @@
     .project-sec-main{
         @include display(flex,center,center);
         gap: 16px;
+        flex-wrap: wrap
     }
 }
-

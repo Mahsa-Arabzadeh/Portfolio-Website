@@ -24,4 +24,22 @@ export const projects = [
     title: "Kahoot Answers Viewer",
     paragraph: "Get answers to your kahoot quiz",
   },
+  {
+    bannerProject: "/images/project3.png",
+    tools: "Express css Node.js",
+    title: "Kahoot Answers Viewer",
+    paragraph: "Get answers to your kahoot quiz",
+  },
+  {
+    bannerProject: "/images/project3.png",
+    tools: "Express css Node.js",
+    title: "Kahoot Answers Viewer",
+    paragraph: "Get answers to your kahoot quiz",
+  },
+  {
+    bannerProject: "/images/project3.png",
+    tools: "Express css Node.js",
+    title: "Kahoot Answers Viewer",
+    paragraph: "Get answers to your kahoot quiz",
+  },
 ];

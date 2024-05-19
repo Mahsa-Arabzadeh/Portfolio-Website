@@ -1,9 +1,10 @@
 "use strict";
 
 import domGenerator from "dom-generator";
-import topSeciton from "./topSection";
+import topSeciton from "../topSections/topSection";
 import { projectsData } from "./data";
 import mainProjects from "./mainProject";
+import button from "../buttonComponent/button";
 
 function projectSection() {
   const projectSection = domGenerator({
@@ -16,6 +17,12 @@ function projectSection() {
         children: [
           {
             tag: topSeciton(projectsData),
+          },
+          {
+            tag: button({
+              startImg: "/images/View all ~~_.svg",
+              btnSize: "large",
+            }),
           },
         ],
       },

@@ -1,0 +1,18 @@
+@import "mixin";
+
+
+.btn-default{
+    @include display(flex,center,center);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &[data-size = "large"]{
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+    }
+    &[data-size = "small"]{
+        width: 130px;
+        height: 30px;
+    }
+}

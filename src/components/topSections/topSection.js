@@ -1,7 +1,6 @@
 "use strict";
 
 import domGenerator from "dom-generator";
-import { projectsData } from "./data";
 
 function topSeciton(props) {
   let { title } = props;
@@ -24,9 +23,7 @@ function topSeciton(props) {
             dataAttributes: { medium: "medium" },
             attributes: { class: "title-sec" },
             properties: {
-              textContent: (title = projectsData
-                .map((data) => data.title)
-                .join("")),
+              textContent: (title = props.map((data) => data.title)),
             },
           },
         ],
