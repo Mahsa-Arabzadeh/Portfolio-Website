@@ -1,6 +1,30 @@
 @import "mixin";
 
 
+.project-sec-top{
+    @include display(flex,space-between,center);
+    width: 100%;
+    .left-part{
+        @include display(flex,space-between,center);
+        width: 730px;
+        .title-sec-part{
+            @include display(flex,start,center);
+            font-size: 32px;
+            .sharp-shape{
+                color: #C778DD;
+            }
+            .title-sec{
+                color: #fff;
+            }
+        }
+        .line-head{
+            width: 543px;
+            height: 5px;
+            background-color: #C778DD;
+        }
+    }
+}
+
 
 // style to top section of projects: 
 .projects-section{
@@ -8,35 +32,42 @@
     height: 518px;
     gap: 48px;
     flex-direction: column;
-    .project-sec-top{
-        @include display(flex,space-between,center);
-        width: 100%;
-        .left-part{
-            @include display(flex,space-between,center);
-            width: 730px;
-            .title-sec-part{
-                @include display(flex,start,center);
-                font-size: 32px;
-                .sharp-shape{
-                    color: #C778DD;
-                }
-                .title-sec{
-                    color: #fff;
-                }
-            }
-            .line-head{
-                width: 543px;
-                height: 5px;
-                background-color: #C778DD;
-            }
-        }
-    }
 
 
     // project main part:
     .project-sec-main{
-        @include display(flex,center,center);
+        @include display(flex,center,start);
         gap: 16px;
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        .card-project{
+            @include display(flex,center,center);
+            flex-direction: column;
+            border: 1px solid #ABB2BF;
+            .project-banner{
+                width: 350px;
+                height: 200px;
+            }
+            .tools-project{
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ABB2BF;
+            }
+            .description-project{
+                @include display(flex,center,center);
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px;
+                .description-title{
+                    font-size: 24px;
+                    color: #fff;
+                    width: 300px;
+                }
+                .btn-part{
+                    @include display(flex,start,center);
+                    width: 100%;
+                    gap: 16px;
+                }
+            }
+        }
     }
 }

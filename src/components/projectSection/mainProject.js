@@ -2,6 +2,7 @@
 
 import domGenerator from "dom-generator";
 import { projects } from "./data";
+import button from "../buttonComponent/button";
 
 function cards(props) {
   let { bannerProject, tools, title, paragraph } = props;
@@ -35,6 +36,26 @@ function cards(props) {
             tag: "p",
             attributes: { class: "description-p" },
             properties: { textContent: paragraph },
+          },
+          {
+            tag: "div",
+            attributes: { class: "btn-part" },
+            children: [
+              {
+                tag: button({
+                  shape: "primary-border",
+                  btnSize: "small",
+                  endImg: "/images/Live _~_.svg",
+                }),
+              },
+              {
+                tag: button({
+                  shape: "secondry-border",
+                  btnSize: "small",
+                  endImg: "/images/Demo __.svg",
+                }),
+              },
+            ],
           },
         ],
       },

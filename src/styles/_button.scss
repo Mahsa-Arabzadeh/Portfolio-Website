@@ -12,7 +12,20 @@
         border-radius: 4px;
     }
     &[data-size = "small"]{
-        width: 130px;
-        height: 30px;
+        padding: 8px 16px;
+    }
+    &[data-shape = "primary-border"]{
+        border: 1px solid #C778DD;
+        transition: .3s;
+        &:hover{
+            box-shadow: #583f5f67 0px 10px 15px -2px, #c778dd31 0px 5px 5px -2px;
+        }
+    }
+    &[data-shape = "secondry-border"]{
+        border: 1px solid #ABB2BF;
+        transition: .3s;
+        &:hover{
+            box-shadow: #abb2bf26 0px 10px 15px -2px, #abb2bf12 0px 5px 5px -2px;
+        }
     }
 }

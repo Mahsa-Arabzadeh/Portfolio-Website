@@ -1,6 +1,6 @@
 @import "mixin";
 
-.hero-section{
+#hero-section{
     height: 483px;
     padding: 40px 0px;
     @include display(flex,space-between,center);

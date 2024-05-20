@@ -6,6 +6,7 @@ export default function button(props) {
   let {
     btnClass,
     startImg,
+    shape,
     textContent,
     endImg,
     anchorLink,
@@ -27,7 +28,7 @@ export default function button(props) {
     tag: "button",
     attributes,
     eventListeners,
-    dataAttributes: { size: btnSize },
+    dataAttributes: { size: btnSize, shape: shape },
     children: [
       {
         tag: "img",

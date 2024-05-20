@@ -1,12 +1,14 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import introductionHero from "./Introduction";
 import heroImage from "./heroImage";
 import heroData from "./data";
 
-function heroSection() {
-  const heroSection = domGenerator({
+export default function heroSection() {
+  return domGenerator({
     tag: "section",
-    attributes: { class: "hero-section" },
+    attributes: { id: "hero-section" },
     children: [
       {
         tag: introductionHero(heroData),
@@ -16,8 +18,4 @@ function heroSection() {
       },
     ],
   });
-
-  return heroSection;
 }
-
-export default heroSection;
