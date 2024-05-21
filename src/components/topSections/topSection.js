@@ -2,9 +2,7 @@
 
 import domGenerator from "dom-generator";
 
-function topSeciton(props) {
-  let { title } = props;
-
+function topSeciton(title) {
   return domGenerator({
     tag: "div",
     attributes: { class: "left-part" },
@@ -23,7 +21,7 @@ function topSeciton(props) {
             dataAttributes: { medium: "medium" },
             attributes: { class: "title-sec" },
             properties: {
-              textContent: (title = props.map((data) => data.title)),
+              textContent: title,
             },
           },
         ],

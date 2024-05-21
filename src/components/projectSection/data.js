@@ -1,10 +1,3 @@
-export const projectsData = [
-  {
-    title: "projects",
-    arrowRight: "/images/View all ~~_.svg",
-  },
-];
-
 export const projects = [
   {
     bannerProject: "/images/project1.png",

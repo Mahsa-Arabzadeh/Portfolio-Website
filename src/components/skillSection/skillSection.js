@@ -2,8 +2,8 @@
 
 import domGenerator from "dom-generator";
 import topSeciton from "../topSections/topSection";
-import { projectsData } from "../projectSection/data";
 import leftSection from "./leftSection";
+import rightSection from "./rightSection";
 
 export default function skillSection() {
   return domGenerator({
@@ -11,7 +11,7 @@ export default function skillSection() {
     attributes: { class: "skill-section" },
     children: [
       {
-        tag: topSeciton(projectsData),
+        tag: topSeciton("skills"),
       },
       {
         tag: "div",
@@ -19,6 +19,9 @@ export default function skillSection() {
         children: [
           {
             tag: leftSection(),
+          },
+          {
+            tag: rightSection(),
           },
         ],
       },

@@ -3,19 +3,19 @@
 .skill-section{
     width: 100%;
     .main-section{
-        @include display(flex,space-between,center);
-        background-color: blue;
+        @include display(flex,space-between,start);
+
+        // left section
         .left-section{
+            background-color: red;
             display: flex;
             flex-direction: column;
             gap: 18px;
             width: 349px;
-            background-color: pink;
             .row-left-sec{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
                 grid-template-rows:  1fr;
-                background-color: royalblue;
                 &:nth-child(1){
                     .imgsrc1{
                         grid-row-start: 1;
@@ -45,6 +45,20 @@
                         width: 52px;
                     }
                 }
+            }
+        }
+
+        // right section(cards)
+        .right-section{
+            @include display(flex,start,start);
+            background-color: red;
+            gap: 16px;
+            .column-section{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                max-width: fit-content;
+                background-color: blue;
             }
         }
     }

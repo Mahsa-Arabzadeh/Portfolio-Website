@@ -2,7 +2,6 @@
 
 import domGenerator from "dom-generator";
 import topSeciton from "../topSections/topSection";
-import { projectsData } from "./data";
 import mainProjects from "./mainProject";
 import button from "../buttonComponent/button";
 
@@ -16,7 +15,7 @@ function projectSection() {
         attributes: { class: "project-sec-top" },
         children: [
           {
-            tag: topSeciton(projectsData),
+            tag: topSeciton("projects"),
           },
           {
             tag: button({
