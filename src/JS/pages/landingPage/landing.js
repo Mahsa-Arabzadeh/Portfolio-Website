@@ -5,9 +5,15 @@ import randomQuote from "../../../components/quote/quote";
 import "../../../styles/main.scss";
 import quoteData from "../../../components/quote/data";
 import projectSection from "../../../components/projectSection/projects";
+import skillSection from "../../../components/skillSection/skillSection";
 
 document.addEventListener("DOMContentLoaded", function () {
   prepend(headerGenerator());
 
-  render(heroSection(), randomQuote(quoteData), projectSection());
+  render(
+    heroSection(),
+    randomQuote(quoteData),
+    projectSection(),
+    skillSection()
+  );
 });

@@ -1,27 +1,23 @@
 @import "mixin";
 
 
-.project-sec-top{
+.left-part{
     @include display(flex,space-between,center);
-    width: 100%;
-    .left-part{
-        @include display(flex,space-between,center);
-        width: 730px;
-        .title-sec-part{
-            @include display(flex,start,center);
-            font-size: 32px;
-            .sharp-shape{
-                color: #C778DD;
-            }
-            .title-sec{
-                color: #fff;
-            }
+    width: 730px;
+    .title-sec-part{
+        @include display(flex,start,center);
+        font-size: 32px;
+        .sharp-shape{
+            color: #C778DD;
         }
-        .line-head{
-            width: 543px;
-            height: 5px;
-            background-color: #C778DD;
+        .title-sec{
+            color: #fff;
         }
+    }
+    .line-head{
+        width: 543px;
+        height: 5px;
+        background-color: #C778DD;
     }
 }
 
@@ -29,11 +25,13 @@
 // style to top section of projects: 
 .projects-section{
     @include display(flex,start,center);
-    height: 518px;
     gap: 48px;
     flex-direction: column;
-
-
+    padding: 16px 0px;
+    .project-sec-top{
+        @include display(flex,space-between,center);
+        width: 100%;
+    }
     // project main part:
     .project-sec-main{
         @include display(flex,center,start);

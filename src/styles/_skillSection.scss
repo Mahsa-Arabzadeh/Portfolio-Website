@@ -1,0 +1,51 @@
+@import "mixin";
+
+.skill-section{
+    width: 100%;
+    .main-section{
+        @include display(flex,space-between,center);
+        background-color: blue;
+        .left-section{
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 349px;
+            background-color: pink;
+            .row-left-sec{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows:  1fr;
+                background-color: royalblue;
+                &:nth-child(1){
+                    .imgsrc1{
+                        grid-row-start: 1;
+                        grid-column-start: 1;
+                        width: 63px;
+                        margin-top: 40px;
+                }
+                .imgsrc3{
+                    grid-row-start: 1;
+                    grid-column-start: 4;
+                }
+                }
+                &:nth-child(2){
+                    .imgsrc1{
+                        margin-top: 20px;
+                        margin-left: 20px;
+                        width: 113px;
+                    }
+                    .imgsrc2{
+                        margin-left: 20px;
+                        width: 63px;
+                    }
+                    .imgsrc3{
+                        grid-row-start: 1;
+                        grid-column-start: 4;
+                        margin-top: 60px;
+                        width: 52px;
+                    }
+                }
+            }
+        }
+    }
+}
