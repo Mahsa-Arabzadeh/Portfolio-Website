@@ -41,6 +41,12 @@
             @include display(flex,center,center);
             flex-direction: column;
             border: 1px solid #ABB2BF;
+            background-color: #282C33;
+            transition: all 1s;
+            &:hover{
+                background-color: #282C33;
+                animation: ring 1.2s ;
+            }
             .project-banner{
                 width: 350px;
                 height: 200px;
@@ -67,5 +73,15 @@
                 }
             }
         }
+    }
+}
+
+@keyframes ring {
+    30%{
+        transform: rotate3d(1,1,1,-3deg);
+        
+    }
+    60%{
+        transform: rotate3d(1,1,1,3deg);
     }
 }

@@ -1,9 +1,12 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import heroData from "./data";
+import button from "../buttonComponent/button";
 
-function introductionHero(props) {
+export default function introductionHero(props) {
   let { skill } = props;
-  const introduction = domGenerator({
+  return domGenerator({
     tag: "div",
     attributes: { class: "introduction-hero" },
     children: [
@@ -34,10 +37,14 @@ function introductionHero(props) {
             "He crafts responsive websites where technologies meet creativity He crafts responsive websites where technologies meet creativity",
         },
       },
+      {
+        tag: button({
+          textContent: "Contact me!!",
+          btnSize: "small",
+          shape: "primary-border",
+          btnClass: "contactMeBtn",
+        }),
+      },
     ],
   });
-
-  return introduction;
 }
-
-export default introductionHero;

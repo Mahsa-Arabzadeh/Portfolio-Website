@@ -81,6 +81,12 @@ export const columnData = [
         {
           skill: "TailWind",
         },
+        {
+          skill: "GitKraken",
+        },
+        {
+          skill: "Github Desktop",
+        },
       ],
     },
     // second card in second column

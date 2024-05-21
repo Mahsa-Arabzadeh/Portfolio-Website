@@ -7,11 +7,10 @@
     border: none;
     cursor: pointer;
     &[data-size = "large"]{
-        width: 150px;
-        height: 40px;
-        border-radius: 4px;
+        padding: 16px 24px;
     }
     &[data-size = "small"]{
+        width: fit-content;
         padding: 8px 16px;
     }
     &[data-shape = "primary-border"]{
@@ -20,12 +19,20 @@
         &:hover{
             box-shadow: #583f5f67 0px 10px 15px -2px, #c778dd31 0px 5px 5px -2px;
         }
+        &:active{
+            transform: scale(.7);
+            background-color: #c778dd23;
+        }
     }
     &[data-shape = "secondry-border"]{
         border: 1px solid #ABB2BF;
         transition: .3s;
         &:hover{
             box-shadow: #abb2bf26 0px 10px 15px -2px, #abb2bf12 0px 5px 5px -2px;
+        }
+        &:active{
+            transform: scale(.7);
+            background-color: #abb2bf21;
         }
     }
 }
