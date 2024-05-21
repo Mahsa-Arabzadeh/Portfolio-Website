@@ -18,7 +18,7 @@ export const columnData = [
       title: "languages",
       skills: [
         {
-          skill: "javascript",
+          skill: "Javascript",
         },
         {
           skill: "TypeScript",
@@ -31,25 +31,25 @@ export const columnData = [
   [
     // first card in second column
     {
-      title: "languages",
+      title: "Databases",
       skills: [
         {
-          skill: "javascript",
-        },
-        {
-          skill: "TypeScript",
+          skill: "-",
         },
       ],
     },
     // second card in second column
     {
-      title: "languages",
+      title: "Other",
       skills: [
         {
-          skill: "javascript",
+          skill: "HTML",
         },
         {
-          skill: "TypeScript",
+          skill: "CSS",
+        },
+        {
+          skill: "SCSS",
         },
       ],
     },
@@ -58,37 +58,37 @@ export const columnData = [
   [
     // first card in second column
     {
-      title: "languages",
+      title: "Tools",
       skills: [
         {
-          skill: "javascript",
+          skill: "Git",
         },
         {
-          skill: "TypeScript",
+          skill: "Vscode",
+        },
+        {
+          skill: "Trello",
+        },
+        {
+          skill: "ChartJs",
+        },
+        {
+          skill: "SweetAlert",
+        },
+        {
+          skill: "Bootstrap",
+        },
+        {
+          skill: "TailWind",
         },
       ],
     },
     // second card in second column
     {
-      title: "languages",
+      title: "Frameworks",
       skills: [
         {
-          skill: "javascript",
-        },
-        {
-          skill: "TypeScript",
-        },
-      ],
-    },
-    // third card in second column
-    {
-      title: "languages",
-      skills: [
-        {
-          skill: "javascript",
-        },
-        {
-          skill: "TypeScript",
+          skill: "React",
         },
       ],
     },

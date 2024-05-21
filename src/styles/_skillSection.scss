@@ -4,14 +4,13 @@
     width: 100%;
     .main-section{
         @include display(flex,space-between,start);
-
+        padding: 40px 0px;
         // left section
         .left-section{
-            background-color: red;
             display: flex;
             flex-direction: column;
             gap: 18px;
-            width: 349px;
+            width: 440px;
             .row-left-sec{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -51,14 +50,25 @@
         // right section(cards)
         .right-section{
             @include display(flex,start,start);
-            background-color: red;
             gap: 16px;
             .column-section{
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
                 max-width: fit-content;
-                background-color: blue;
+                .skill-card{
+                    width: 196px;
+                    border: 1px solid #ABB2BF;
+                    .title-card{
+                        padding: 8px ;
+                        color: #fff;
+                        font-size: 16px;
+                        border: 1px solid #ABB2BF;
+                    }
+                    .desc-card{
+                        padding: 8px;
+                    }
+                }
             }
         }
     }

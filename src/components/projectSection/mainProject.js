@@ -52,7 +52,7 @@ function cards(props) {
                 tag: button({
                   shape: "secondry-border",
                   btnSize: "small",
-                  endImg: "/images/Demo __.svg",
+                  endImg: "/images/Live _~git_.svg",
                 }),
               },
             ],

@@ -27,7 +27,7 @@
     @include display(flex,start,center);
     gap: 48px;
     flex-direction: column;
-    padding: 16px 0px;
+    padding: 40px 0px;
     .project-sec-top{
         @include display(flex,space-between,center);
         width: 100%;
