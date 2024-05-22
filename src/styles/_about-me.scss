@@ -1,0 +1,16 @@
+@import "mixin";
+
+.about-section{
+    background-color: red;
+    .main-section{
+        @include display(flex,space-between,center);
+        background-color: pink;
+        .about-me-left{
+            @include display(flex,space-between,start);
+            flex-direction: column;
+            gap: 27px;
+            width: 515px;
+            background-color: blue;
+        }
+    }
+}

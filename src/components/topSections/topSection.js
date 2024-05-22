@@ -2,7 +2,7 @@
 
 import domGenerator from "dom-generator";
 
-function topSeciton(title) {
+export default function topSeciton(title) {
   return domGenerator({
     tag: "div",
     attributes: { class: "left-part" },
@@ -33,5 +33,3 @@ function topSeciton(title) {
     ],
   });
 }
-
-export default topSeciton;
