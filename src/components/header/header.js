@@ -1,19 +1,16 @@
 import domGenerator from "dom-generator";
 import selectLang from "./language";
 import navBarGenerator from "./navBar";
-import headerLogo from "./headerLogo";
-import { logoData } from "./headerLogo";
+import logoGenerator from "../logoGenerator/logoGenerator";
+import { logoData } from "../logoGenerator/data";
 
-function headerGenerator() {
-  const headerGenerator = domGenerator({
+export default function headerGenerator() {
+  return domGenerator({
     tag: "header",
     attributes: { id: "header" },
     children: [
       {
-        tag: headerLogo(
-          logoData.map((item) => item.name).join(""),
-          logoData.map((item) => item.logoSvg).join("")
-        ),
+        tag: logoGenerator(logoData),
       },
       {
         tag: "div",
@@ -29,8 +26,4 @@ function headerGenerator() {
       },
     ],
   });
-
-  return headerGenerator;
 }
-
-export default headerGenerator;

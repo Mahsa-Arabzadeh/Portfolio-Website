@@ -1,19 +1,11 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import heroSection from "../heroSection/heroSection";
-import headerGenerator from "./header";
-import projectSection from "../projectSection/projects";
 
-export const logoData = [
-  {
-    name: "Mah",
-  },
-  {
-    logoSvg: "/images/Logo.svg",
-  },
-];
-
-export function headerLogo(name, logoSvg) {
-  const headerLogo = domGenerator({
+export default function logoGenerator(props) {
+  const { name, logoSvg } = props;
+  return domGenerator({
     tag: "div",
     attributes: { id: "logo-container" },
     eventListeners: {
@@ -21,8 +13,6 @@ export function headerLogo(name, logoSvg) {
         const heroSectionVar = domGenerator({
           tag: heroSection(),
         });
-
-        console.log(heroSectionVar);
 
         heroSectionVar.scrollIntoView({ behavior: "smooth" });
       },
@@ -39,8 +29,4 @@ export function headerLogo(name, logoSvg) {
       },
     ],
   });
-
-  return headerLogo;
 }
-
-export default headerLogo;

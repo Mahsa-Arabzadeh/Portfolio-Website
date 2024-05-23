@@ -3,9 +3,6 @@
 import domGenerator from "dom-generator";
 
 const dataLang = [
-  // {
-  //   svgArrow: "/images/Grouparrow.svg",
-  // },
   {
     languages: [
       {
