@@ -1,16 +1,33 @@
 @import "mixin";
 
 .about-section{
-    background-color: red;
     .main-section{
         @include display(flex,space-between,center);
-        background-color: pink;
+        padding: 40px 0px;
         .about-me-left{
             @include display(flex,space-between,start);
             flex-direction: column;
             gap: 27px;
             width: 515px;
-            background-color: blue;
+        }
+        .image-about{
+            display: grid;
+            position: relative;
+            width: 343px;
+            margin-right: 40px;
+            border-bottom: 1px solid #C778DD;
+            .shape-about{
+                &:nth-of-type(2){
+                    position: absolute;
+                    top: 60px;
+                }
+                &:nth-of-type(3){
+                    position: absolute;
+                    top: 300px;
+                    height: 60px;
+                    right: 15px;
+                }
+            }
         }
     }
 }

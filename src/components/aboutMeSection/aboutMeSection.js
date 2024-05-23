@@ -4,6 +4,8 @@ import domGenerator from "dom-generator";
 import topSeciton from "../topSections/topSection";
 import aboutMeIntroductions from "./aboutMeIntroduction";
 import { aboutMeData } from "./data";
+import imageAbout from "./imageAbout";
+import { profileAboutData } from "./data";
 
 export default function aboutMeSection() {
   return domGenerator({
@@ -19,6 +21,9 @@ export default function aboutMeSection() {
         children: [
           {
             tag: aboutMeIntroductions(aboutMeData),
+          },
+          {
+            tag: imageAbout(profileAboutData),
           },
         ],
       },
