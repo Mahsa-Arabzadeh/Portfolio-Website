@@ -9,6 +9,7 @@ import quoteData from "../../../components/quote/data";
 import projectSection from "../../../components/projectSection/projects";
 import skillSection from "../../../components/skillSection/skillSection";
 import aboutMeSection from "../../../components/aboutMeSection/aboutMeSection";
+import footer from "../../../components/footer/footer";
 
 document.addEventListener("DOMContentLoaded", function () {
   prepend(headerGenerator());
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     randomQuote(quoteData),
     projectSection(),
     skillSection(),
-    aboutMeSection()
+    aboutMeSection(),
+    footer()
   );
 });

@@ -15,20 +15,11 @@ const dataLang = [
   },
 ];
 
-// find method
-
-function selectLang() {
-  const langSelect = domGenerator({
+export default function selectLang() {
+  return domGenerator({
     tag: "div",
     attributes: { class: "lang-container" },
     children: [
-      // {
-      //   tag: "img",
-      //   attributes: {
-      //     class: "select-svg",
-      //     src: dataLang[0].svgArrow,
-      //   },
-      // },
       {
         tag: "select",
         attributes: { class: "select-lang" },
@@ -46,12 +37,4 @@ function selectLang() {
       },
     ],
   });
-
-  return langSelect;
 }
-
-export default selectLang;
-
-// TODO:
-// create a select tag ✔
-// write jsdoc comments

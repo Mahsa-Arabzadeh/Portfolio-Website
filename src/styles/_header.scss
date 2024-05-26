@@ -10,19 +10,6 @@
     align-items: center;
     position: fixed;
     background-color: #282C33;
-    #logo-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 60px;
-        height: 21px;
-        cursor: pointer;
-        .logo-name{
-            color: #fff;
-            font-weight: 700;
-            font-size: 16px;
-        }
-    }
     .nav-container{
         display: flex;
         justify-content: center;
