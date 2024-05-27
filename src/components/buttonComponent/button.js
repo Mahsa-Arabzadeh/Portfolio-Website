@@ -13,11 +13,13 @@ export default function button(props) {
     btnSize,
     disable,
     eventListeners,
+    type,
   } = props;
 
   const attributes = {
     class: `btn-default ${btnClass}`,
     href: anchorLink ?? "#",
+    type: type,
   };
 
   if (disable) {

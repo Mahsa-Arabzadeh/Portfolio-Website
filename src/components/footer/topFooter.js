@@ -4,7 +4,6 @@ import domGenerator from "dom-generator";
 import logoGenerator from "../logoGenerator/logoGenerator";
 import { logoData } from "../logoGenerator/data";
 import { footerData } from "./data";
-import footer from "./footer";
 
 export default function topFooter() {
   return domGenerator({
@@ -29,6 +28,7 @@ function leftFooter(props) {
     children: [
       {
         tag: "div",
+        attributes: { class: "left-email" },
         children: [
           {
             tag: logoGenerator(logoData),
@@ -42,6 +42,7 @@ function leftFooter(props) {
       },
       {
         tag: "h3",
+        attributes: { class: "carrier-text" },
         properties: { textContent: carrier },
       },
     ],
@@ -76,10 +77,10 @@ function mediaFooter() {
 function mediaImgGenerator(srcImg, hrefImg) {
   return domGenerator({
     tag: "a",
-    attributes: { href: hrefImg, target: "_blank" },
+    attributes: { class: "media-img", href: hrefImg, target: "_blank" },
     children: {
       tag: "img",
-      attributes: { class: "media-img", src: srcImg },
+      attributes: { src: srcImg },
     },
   });
 }

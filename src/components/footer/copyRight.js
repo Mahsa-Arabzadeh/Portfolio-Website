@@ -10,7 +10,7 @@ export default function copyRight(props) {
       {
         tag: "img",
         attributes: {
-          id: "copy-right-logo",
+          class: "copy-right-logo",
           src: "/images/copyright-symbol-svgrepo-com (1).svg",
         },
       },

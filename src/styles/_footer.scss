@@ -1,0 +1,52 @@
+@import "mixin";
+
+#footer{
+    @include display(flex,space-between,center);
+    flex-direction: column;
+    gap: 48px;
+    border-top: 2px solid #ABB2BF;
+    padding: 32px 0px;
+    .top-footer{
+        @include display(flex,space-between,center);
+        width: 100%;
+        .left-footer{
+            @include display(flex,space-between,start);
+            flex-direction: column;
+            gap: 14px;
+            .left-email{
+                gap: 25px;
+                @include display(flex,space-between,center);
+            }
+            .carrier-text{
+                color: #fff;
+            }
+        }
+        .media-footer{
+            h3{
+                color: #fff;
+                font-size: 24px;
+            }
+            .media-container{
+                @include display(flex,start,center);
+                .media-img{
+                    @include display(flex,center,center);
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+
+    // copyright part 
+    #copy-right{
+        @include display(flex,center,center);
+        gap: 7px;
+        width: 100%;
+        .copy-right-logo{
+            width: 16px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}

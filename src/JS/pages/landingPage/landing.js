@@ -9,6 +9,7 @@ import quoteData from "../../../components/quote/data";
 import projectSection from "../../../components/projectSection/projects";
 import skillSection from "../../../components/skillSection/skillSection";
 import aboutMeSection from "../../../components/aboutMeSection/aboutMeSection";
+import contactMeSection from "../../../components/contactMeSection/contactMe";
 import footer from "../../../components/footer/footer";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     projectSection(),
     skillSection(),
     aboutMeSection(),
+    contactMeSection(),
     footer()
   );
 });
