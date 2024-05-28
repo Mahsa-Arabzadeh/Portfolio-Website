@@ -12,7 +12,6 @@ export default function contactForm() {
       submit: (event) => {
         event.preventDefault();
         sendEmail();
-        reset();
         return false;
       },
     },
@@ -66,45 +65,52 @@ export default function contactForm() {
   });
 }
 
-async function sendEmail() {
+async function loadScript(url) {
   try {
-    await loadScript("https://smtpjs.com/v3/smtp.js");
-
-    const form = document.querySelector(".contact-form");
-    const userName = form.querySelector(".name-input").value;
-    const userEmail = form.querySelector(".email-input").value;
-    const userMessage = form.querySelector(".textarea-input").value;
-
-    Email.send({
-      secureToken: "50bfcd8c-adbb-46ed-a0f7-00572dc6d979",
-      To: "keyheaven2003@gmail.com",
-      From: userEmail,
-      Subject: "New contact form enquiry",
-      Body: `
-      Name: ${userName}
-      Email: ${userEmail}
-      Message: ${userMessage}
-      `,
-    }).then((message) => alert("Message sent successfully"));
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch script: ${response.statusText}`);
+    }
+    const scriptText = await response.text();
+    const scriptElement = document.createElement("script");
+    scriptElement.type = "text/javascript";
+    scriptElement.text = scriptText;
+    document.head.appendChild(scriptElement);
   } catch (error) {
-    console.error("Error sending email:", error);
+    throw new Error(error);
   }
 }
 
-function loadScript(url) {
-  return fetch(url)
-    .then((response) => response.text())
-    .then((scriptText) => {
-      const scriptElement = document.createElement("script");
-      scriptElement.textContent = scriptText;
-      document.head.appendChild(scriptElement);
-    })
-    .catch((error) => {
-      console.error("Error loading script:", error);
+async function initEmailJS() {
+  try {
+    await loadScript(
+      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    );
+    await emailjs.init({
+      publicKey: "x2Lq3viPQ3RwmRq0H",
     });
+  } catch (error) {
+    throw new Error(error);
+  }
 }
 
-function reset() {
-  const form = document.querySelector(".contact-form");
-  form.reset();
+initEmailJS();
+
+function sendEmail() {
+  const name = document.querySelector(".name-input");
+  const email = document.querySelector(".email-input");
+  const title = document.querySelector(".title-input");
+  const message = document.querySelector(".textarea-input");
+
+  emailjs
+    .send("service_cw73z64", "template_w6bbo8i", {
+      from_name: name.value,
+      to_name: "mahsa",
+      title: title.value,
+      email_id: email.value,
+      message: message.value,
+    })
+    .then(function (res) {
+      alert("success", res.status);
+    });
 }
