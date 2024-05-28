@@ -9,9 +9,10 @@ export default function contactForm() {
     tag: "form",
     attributes: { class: "contact-form" },
     eventListeners: {
-      submit: (event) => {
+      submit: async (event) => {
         event.preventDefault();
-        sendEmail();
+        await sendEmail();
+        resetForm();
         return false;
       },
     },
@@ -113,4 +114,9 @@ function sendEmail() {
     .then(function (res) {
       alert("success", res.status);
     });
+}
+
+function resetForm() {
+  const form = document.querySelector(".contact-form");
+  form.reset();
 }
