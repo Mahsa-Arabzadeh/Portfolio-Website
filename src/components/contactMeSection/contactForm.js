@@ -2,7 +2,7 @@
 
 import domGenerator from "dom-generator";
 import button from "../buttonComponent/button";
-import { emailAddress } from "../../JS/constants/constants";
+import { userName } from "../../JS/constants/constants";
 
 export default function contactForm() {
   return domGenerator({
@@ -105,7 +105,7 @@ function sendEmail() {
   emailjs
     .send("service_cw73z64", "template_w6bbo8i", {
       from_name: name.value,
-      to_name: "mahsa",
+      to_name: userName,
       title: title.value,
       email_id: email.value,
       message: message.value,

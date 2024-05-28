@@ -8,3 +8,6 @@ export const github = "https://github.com/Mahsa-Arabzadeh";
 
 // discord link
 export const discord = "";
+
+// userName
+export const userName = "Mahsa";
