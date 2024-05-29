@@ -3,6 +3,7 @@
 import domGenerator from "dom-generator";
 import button from "../buttonComponent/button";
 import { userName } from "../../JS/constants/constants";
+import Swal from "sweetalert2";
 
 export default function contactForm() {
   return domGenerator({
@@ -113,7 +114,11 @@ function sendEmail() {
       message: message.value,
     })
     .then(function (res) {
-      alert("success", res.status);
+      Swal.fire({
+        title: "Email sent!",
+        text: "We will contact you as soon as possible.",
+        icon: "success",
+      });
     });
 }
 
