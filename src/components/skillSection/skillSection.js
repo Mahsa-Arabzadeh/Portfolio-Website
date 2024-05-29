@@ -11,7 +11,7 @@ export default function skillSection() {
     attributes: { class: "skill-section" },
     children: [
       {
-        tag: topSeciton("skills"),
+        tag: topSeciton("#", "skills", "line-head"),
       },
       {
         tag: "div",

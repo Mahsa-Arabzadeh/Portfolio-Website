@@ -2,7 +2,7 @@
 
 import domGenerator from "dom-generator";
 
-export default function topSeciton(title) {
+export default function topSeciton(shape, title, line) {
   return domGenerator({
     tag: "div",
     attributes: { class: "left-part" },
@@ -14,7 +14,7 @@ export default function topSeciton(title) {
           {
             tag: "span",
             attributes: { class: "sharp-shape" },
-            properties: { textContent: "#" },
+            properties: { textContent: shape },
           },
           {
             tag: "h2",
@@ -28,7 +28,8 @@ export default function topSeciton(title) {
       },
       {
         tag: "div",
-        attributes: { class: "line-head" },
+        // must include class "line-head"
+        attributes: { class: line },
       },
     ],
   });

@@ -63,7 +63,7 @@ function cards(props) {
   });
 }
 
-function mainProjects() {
+export default function mainProjects() {
   const cardsTag = projects.map((data) => {
     let { bannerProject, tools, title, paragraph } = data;
     const card = cards({
@@ -78,15 +78,11 @@ function mainProjects() {
     };
   });
 
-  const mainProjects = domGenerator({
+  return domGenerator({
     tag: "div",
     attributes: { class: "project-sec-main" },
     children: cardsTag.map((item) => ({
       tag: item.tag,
     })),
   });
-
-  return mainProjects;
 }
-
-export default mainProjects;

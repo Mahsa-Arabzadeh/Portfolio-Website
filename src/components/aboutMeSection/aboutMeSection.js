@@ -13,7 +13,7 @@ export default function aboutMeSection() {
     attributes: { class: "about-section" },
     children: [
       {
-        tag: topSeciton("about-me"),
+        tag: topSeciton("#", "about-me", "line-head"),
       },
       {
         tag: "div",

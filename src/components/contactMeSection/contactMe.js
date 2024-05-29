@@ -10,7 +10,7 @@ export default function contactMeSection() {
     attributes: { class: "section-contactme" },
     children: [
       {
-        tag: topSeciton("contacts"),
+        tag: topSeciton("#", "contacts", "line-head"),
       },
       {
         tag: "div",

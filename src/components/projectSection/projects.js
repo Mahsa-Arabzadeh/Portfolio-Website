@@ -4,8 +4,6 @@ import domGenerator from "dom-generator";
 import topSeciton from "../topSections/topSection";
 import mainProjects from "./mainProject";
 import button from "../buttonComponent/button";
-import renderProjectsPage from "../../JS/pages/projects/projectsPage";
-import { render } from "../../JS/render";
 
 function projectSection() {
   const projectSection = domGenerator({
@@ -17,7 +15,7 @@ function projectSection() {
         attributes: { class: "project-sec-top" },
         children: [
           {
-            tag: topSeciton("projects"),
+            tag: topSeciton("#", "projects", "line-head"),
           },
           {
             tag: button({
@@ -25,7 +23,7 @@ function projectSection() {
               btnSize: "large",
               eventListeners: {
                 click: () => {
-                  alert("mahsa");
+                  window.location.href = "/projects.html";
                 },
               },
             }),

@@ -1,0 +1,56 @@
+@import "mixin";
+
+.list-project{
+    padding: 40px 0px;
+    @include display(flex,center,start);
+    flex-direction: column;
+    gap: 14px;
+}
+
+.projects-container{
+    @include display(flex,start,start);
+    // flex-direction: column;
+    flex-wrap: wrap;
+        // project main part:
+        .project-sec-main{
+            @include display(flex,center,start);
+            gap: 16px;
+            flex-wrap: wrap;
+            .card-project{
+                @include display(flex,center,center);
+                flex-direction: column;
+                border: 1px solid #ABB2BF;
+                background-color: #282C33;
+                transition: all 1s;
+                &:hover{
+                    background-color: #282C33;
+                    animation: ring 1.2s ;
+                }
+                .project-banner{
+                    width: 350px;
+                    height: 200px;
+                }
+                .tools-project{
+                    width: 100%;
+                    padding: 8px;
+                    border: 1px solid #ABB2BF;
+                }
+                .description-project{
+                    @include display(flex,center,center);
+                    flex-direction: column;
+                    gap: 16px;
+                    padding: 16px;
+                    .description-title{
+                        font-size: 24px;
+                        color: #fff;
+                        width: 300px;
+                    }
+                    .btn-part{
+                        @include display(flex,start,center);
+                        width: 100%;
+                        gap: 16px;
+                    }
+                }
+            }
+        }
+}

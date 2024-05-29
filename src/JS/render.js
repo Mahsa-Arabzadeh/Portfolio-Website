@@ -29,7 +29,7 @@ export function render(...elements) {
   });
 
   main.appendChild(container);
-  app.appendChild(main);
+  document.body.appendChild(main);
 
   return (render = elements.forEach((element) => {
     container.appendChild(element);
