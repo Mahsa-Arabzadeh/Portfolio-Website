@@ -2,6 +2,7 @@
 
 import domGenerator from "dom-generator";
 import contactForm from "./contactForm";
+import topSeciton from "../topSections/topSection";
 
 export default function contactMeSection() {
   return domGenerator({
@@ -9,7 +10,16 @@ export default function contactMeSection() {
     attributes: { class: "section-contactme" },
     children: [
       {
-        tag: contactForm(),
+        tag: topSeciton("contacts"),
+      },
+      {
+        tag: "div",
+        attributes: { class: "main-contacts" },
+        children: [
+          {
+            tag: contactForm(),
+          },
+        ],
       },
     ],
   });

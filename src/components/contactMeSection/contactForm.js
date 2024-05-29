@@ -60,6 +60,7 @@ export default function contactForm() {
           eventListeners: {},
           shape: "primary-border",
           type: "submit",
+          btnClass: "send-btn",
         }),
       },
     ],
