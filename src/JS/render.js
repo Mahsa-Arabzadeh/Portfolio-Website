@@ -16,6 +16,8 @@ export function append(...elements) {
 }
 
 export function render(...elements) {
+  const app = document.querySelector("#app");
+
   const main = domGenerator({
     tag: "div",
     attributes: { class: "main" },
@@ -27,7 +29,7 @@ export function render(...elements) {
   });
 
   main.appendChild(container);
-  document.body.appendChild(main);
+  app.appendChild(main);
 
   return (render = elements.forEach((element) => {
     container.appendChild(element);

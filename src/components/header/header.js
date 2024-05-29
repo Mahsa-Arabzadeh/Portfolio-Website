@@ -1,8 +1,10 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import selectLang from "./language";
 import navBarGenerator from "./navBar";
-import logoGenerator from "../logoGenerator/logoGenerator";
 import { logoData } from "../logoGenerator/data";
+import logoGenerator from "../logoGenerator/logoGenerator";
 
 export default function headerGenerator() {
   return domGenerator({
