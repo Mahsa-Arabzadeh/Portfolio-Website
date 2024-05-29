@@ -1,7 +1,7 @@
 "use strict";
 import domGenerator from "dom-generator";
 
-function prepend(...elements) {
+export function prepend(...elements) {
   const prepend = elements.forEach((element) => {
     document.body.prepend(element);
   });
@@ -9,7 +9,13 @@ function prepend(...elements) {
   return prepend;
 }
 
-function render(...elements) {
+export function append(...elements) {
+  return elements.forEach((elem) => {
+    document.body.appendChild(elem);
+  });
+}
+
+export function render(...elements) {
   const main = domGenerator({
     tag: "div",
     attributes: { class: "main" },
@@ -27,5 +33,3 @@ function render(...elements) {
     container.appendChild(element);
   }));
 }
-
-export { prepend, render };
