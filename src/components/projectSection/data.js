@@ -36,3 +36,18 @@ export const projects = [
     paragraph: "Get answers to your kahoot quiz",
   },
 ];
+
+export const miniProjectsData = [
+  {
+    bannerProject: "",
+    tools: "Express css Node.js",
+    title: "Kahoot Answers Viewer",
+    paragraph: "Get answers to your kahoot quiz",
+  },
+  {
+    bannerProject: "",
+    tools: "Express css Node.js",
+    title: "Kahoot Answers Viewer",
+    paragraph: "Get answers to your kahoot quiz",
+  },
+];

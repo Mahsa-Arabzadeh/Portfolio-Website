@@ -4,7 +4,7 @@ import domGenerator from "dom-generator";
 import { projects } from "./data";
 import button from "../buttonComponent/button";
 
-function cards(props) {
+export function cards(props) {
   let { bannerProject, tools, title, paragraph } = props;
 
   return domGenerator({

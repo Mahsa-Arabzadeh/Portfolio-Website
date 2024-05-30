@@ -3,6 +3,8 @@
 import domGenerator from "dom-generator";
 import topSeciton from "../../../components/topSections/topSection";
 import mainProjects from "../../../components/projectSection/mainProject";
+import { cards } from "../../../components/projectSection/mainProject";
+import { miniProjectsData } from "../../../components/projectSection/data";
 
 export function topProjectsPage(props) {
   let { text } = props;
@@ -40,5 +42,44 @@ export function mainProjectPage() {
         ],
       },
     ],
+  });
+}
+
+export function miniProjects() {
+  return domGenerator({
+    tag: "section",
+    attributes: { class: "mini-projects" },
+    children: [
+      {
+        tag: topSeciton("#", "mini-projects", null),
+      },
+      {
+        tag: miniProjectsCard(),
+      },
+    ],
+  });
+}
+
+function miniProjectsCard() {
+  const cardsTag = miniProjectsData.map((data) => {
+    let { bannerProject, tools, title, paragraph } = data;
+    const card = cards({
+      bannerProject,
+      tools,
+      title,
+      paragraph,
+    });
+
+    return {
+      tag: card,
+    };
+  });
+
+  return domGenerator({
+    tag: "div",
+    attributes: { class: "mini-projects-card" },
+    children: cardsTag.map((item) => ({
+      tag: item.tag,
+    })),
   });
 }
