@@ -24,7 +24,7 @@
 
 // style to top section of projects: 
 .projects-section{
-    @include display(flex,start,center);
+    @include display(flex,start,start);
     gap: 48px;
     flex-direction: column;
     padding: 40px 0px;
@@ -41,10 +41,11 @@
             @include display(flex,center,center);
             flex-direction: column;
             border: 1px solid #ABB2BF;
-            background-color: #282C33;
             transition: all 1s;
+            &:nth-child(n+4){
+                display: none;
+            }
             &:hover{
-                background-color: #282C33;
                 animation: ring 1.2s ;
             }
             .project-banner{
