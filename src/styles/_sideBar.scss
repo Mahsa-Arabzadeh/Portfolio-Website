@@ -1,0 +1,38 @@
+@import "mixin";
+
+.side-bar{
+    background-color: #191a1d;
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    z-index: 1100;
+    display: none;
+    #nav-bar{
+        .li-nav{
+            padding: 16px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            .sharp-nav{
+                color: #C778DD;
+            }
+            .text-nav{
+                transition: .3s;
+                color: #ABB2BF;
+                &:hover{
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+
+// media query
+
+// max-width 700px
+@media screen and (max-width: 700px){
+    .side-bar{
+    @include display(flex,start,start);
+    }
+}

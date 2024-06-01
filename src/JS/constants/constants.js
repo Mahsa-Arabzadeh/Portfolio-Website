@@ -11,3 +11,6 @@ export const discord = "";
 
 // userName
 export const userName = "Mahsa";
+
+// public email js KEY
+export const publicKey = "x2Lq3viPQ3RwmRq0H";

@@ -2,17 +2,19 @@
 
 import domGenerator from "dom-generator";
 import button from "../buttonComponent/button";
-import { userName } from "../../JS/constants/constants";
+import { userName, publicKey } from "../../JS/constants/constants";
 import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 export default function contactForm() {
   return domGenerator({
     tag: "form",
     attributes: { class: "contact-form" },
     eventListeners: {
-      submit: async (event) => {
+      submit: (event) => {
         event.preventDefault();
-        await sendEmail();
+        initEmailJS();
+        sendEmail();
         resetForm();
         return false;
       },
@@ -68,36 +70,15 @@ export default function contactForm() {
   });
 }
 
-async function loadScript(url) {
+function initEmailJS() {
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch script: ${response.statusText}`);
-    }
-    const scriptText = await response.text();
-    const scriptElement = document.createElement("script");
-    scriptElement.type = "text/javascript";
-    scriptElement.text = scriptText;
-    document.head.appendChild(scriptElement);
-  } catch (error) {
-    throw new Error(error);
-  }
-}
-
-async function initEmailJS() {
-  try {
-    await loadScript(
-      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    );
-    await emailjs.init({
-      publicKey: "x2Lq3viPQ3RwmRq0H",
+    emailjs.init({
+      publicKey: publicKey,
     });
   } catch (error) {
     throw new Error(error);
   }
 }
-
-initEmailJS();
 
 function sendEmail() {
   const name = document.querySelector(".name-input");

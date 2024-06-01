@@ -2,7 +2,6 @@
 
 #header{
     width: 100%;
-    padding: 0px 190px;
     height: 55px;
     z-index: 1000;
     display: flex;
@@ -10,10 +9,14 @@
     align-items: center;
     position: fixed;
     background-color: #282C33;
+    .logo-header{
+        margin-left: 30px;
+    }
     .nav-container{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 30px;
     }
     #nav-bar{
         display: flex;
@@ -35,12 +38,41 @@
         }
     }
     .select-lang{
-        background-color: #282C33;
+        background-color: transparent;
         border: none;
         color: #ABB2BF;
         outline: none;
         .lang-item{
+            background-color: #282C33;
             border: none;
+        }
+    }
+    .side-bar-icon{
+        display: none;
+    }
+    // .overlay{
+    //     background-color: rgba(131, 35, 6, 0.23);
+    //     filter: blur(2px);
+    //     width: 100%;
+    //     height: 100vh;
+    //     position: absolute;
+    //     inset: 0;
+    //     margin: 0 auto;
+    //     z-index: -200;
+    // }
+}
+
+// max width 700px
+@media screen and (max-width: 700px){
+    #header{
+        @include display(flex,space-between,center);
+        .nav-container{
+            display: none;
+        }
+        .side-bar-icon{
+            display: flex;
+            padding: 0px 30px;
+            cursor: pointer;
         }
     }
 }

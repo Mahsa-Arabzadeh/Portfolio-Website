@@ -15,7 +15,7 @@ const dataItemNav = [
   },
 ];
 
-function navBarGenerator() {
+export function navBarGenerator() {
   const liNav = dataItemNav.map((item) => {
     const liTag = listNavGenerator(item.textItem);
 

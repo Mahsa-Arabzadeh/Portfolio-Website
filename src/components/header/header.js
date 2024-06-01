@@ -5,6 +5,7 @@ import selectLang from "./language";
 import navBarGenerator from "./navBar";
 import { logoData } from "../logoGenerator/data";
 import logoGenerator from "../logoGenerator/logoGenerator";
+import sideBar from "../sideBar/renderSideBar";
 
 export default function headerGenerator() {
   return domGenerator({
@@ -13,6 +14,7 @@ export default function headerGenerator() {
     children: [
       {
         tag: logoGenerator(logoData),
+        attributes: { class: "logo-header" },
       },
       {
         tag: "div",
@@ -26,6 +28,19 @@ export default function headerGenerator() {
           },
         ],
       },
+      {
+        tag: "img",
+        attributes: { class: "side-bar-icon", src: "/images/Frame 60.svg" },
+        eventListeners: {
+          click: () => {
+            document.body.prepend(sideBar());
+          },
+        },
+      },
+      // {
+      //   tag: "div",
+      //   attributes: { class: "overlay" },
+      // },
     ],
   });
 }
