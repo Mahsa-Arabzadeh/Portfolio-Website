@@ -32,6 +32,6 @@ function dimentionMouse(e) {
       left: `${posX}px`,
       top: `${posY}px`,
     },
-    { duration: 500, fill: "forwards" }
+    { duration: 300, fill: "forwards" }
   );
 }

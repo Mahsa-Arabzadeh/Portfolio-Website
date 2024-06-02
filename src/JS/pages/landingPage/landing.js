@@ -12,6 +12,7 @@ import contactMeSection from "../../../components/contactMeSection/contactMe";
 import footer from "../../../components/footer/footer";
 import { append } from "../../render";
 import mouseMove from "../../../components/mouseMove/mouseMove";
+import scrollBar from "../../../components/scrollBar/scrollBar";
 import "../../../styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     skillSection(),
     aboutMeSection(),
     contactMeSection(),
-    mouseMove()
+    mouseMove(),
+    scrollBar()
   );
 
   append(footer());

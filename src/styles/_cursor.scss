@@ -13,9 +13,9 @@
 .cursor-dot,
 .cursor-outline{
     position: fixed;
-   inset: 0;
+    inset: 0;
     transform: translate(-50%,-50%);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 2000;
     pointer-events: none;
 }
