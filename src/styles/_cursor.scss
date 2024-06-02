@@ -9,3 +9,13 @@
     height: 30px;
     border: 2px solid grey;
 }
+
+.cursor-dot,
+.cursor-outline{
+    position: fixed;
+   inset: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
