@@ -11,6 +11,7 @@ import aboutMeSection from "../../../components/aboutMeSection/aboutMeSection";
 import contactMeSection from "../../../components/contactMeSection/contactMe";
 import footer from "../../../components/footer/footer";
 import { append } from "../../render";
+import mouseMove from "../../../components/mouseMove/mouseMove";
 import "../../../styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     projectSection(),
     skillSection(),
     aboutMeSection(),
-    contactMeSection()
+    contactMeSection(),
+    mouseMove()
   );
 
   append(footer());
