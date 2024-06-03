@@ -14,6 +14,7 @@ export default function button(props) {
     disable,
     eventListeners,
     type,
+    download,
   } = props;
 
   const attributes = {
@@ -25,9 +26,12 @@ export default function button(props) {
   if (disable) {
     attributes.disabled = true;
   }
+  if (download) {
+    attributes.download = download;
+  }
 
   return domGenerator({
-    tag: "button",
+    tag: "a",
     attributes,
     eventListeners,
     dataAttributes: { size: btnSize, shape: shape },

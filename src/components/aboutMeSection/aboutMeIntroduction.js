@@ -37,10 +37,12 @@ export default function aboutMeIntroduction(props) {
       ...paragraphTag,
       {
         tag: button({
+          textContent: "Download CV",
           shape: "primary-border",
           btnSize: "small",
           btnClass: "about-btn",
-          endImg: "/images/Liveaboutme_.svg",
+          download: "cumputer.png",
+          href: "/images/portrait-delivery-man-holding-cardboard-parcel 2.png",
         }),
       },
     ],
