@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     skillSection(),
     aboutMeSection(),
     contactMeSection(),
-    mouseMove(),
-    scrollBar()
+    mouseMove()
+    // scrollBar()
   );
 
   append(footer());
