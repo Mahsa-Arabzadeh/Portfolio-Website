@@ -1,12 +1,13 @@
 "use strict";
 
+import axios from "axios";
 import domGenerator from "dom-generator";
 import quoteData from "./data";
 
-function randomQuote(props) {
+export default function randomQuote(props) {
   let { randomText, author, quoteSvg } = props;
 
-  const quote = domGenerator({
+  return domGenerator({
     tag: "section",
     attributes: { class: "quote-section" },
     children: [
@@ -67,11 +68,21 @@ function randomQuote(props) {
       },
     ],
   });
-
-  return quote;
 }
 
-export default randomQuote;
+// * get data api from random api quote with axios
+function getDataAxios() {
+  axios
+    .get("https://api.adviceslip.com/advice")
+    .then((res) => {
+      console.log(res);
+      randomQuote();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
-// todo:
-// ? we can use api for random quote.
+const btn = document
+  .querySelector(".btn")
+  .addEventListener("click", getDataAxios);

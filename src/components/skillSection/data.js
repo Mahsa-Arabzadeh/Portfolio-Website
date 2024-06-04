@@ -26,7 +26,6 @@ export const columnData = [
       ],
     },
   ],
-
   // second column
   [
     // first card in second column
@@ -79,13 +78,16 @@ export const columnData = [
           skill: "Bootstrap",
         },
         {
-          skill: "TailWind",
-        },
-        {
           skill: "GitKraken",
         },
         {
-          skill: "Github Desktop",
+          skill: "Axios",
+        },
+        {
+          skill: "Rull-up",
+        },
+        {
+          skill: "Vite",
         },
       ],
     },
