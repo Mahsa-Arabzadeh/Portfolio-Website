@@ -1,8 +1,7 @@
 const quoteData = [
   {
-    randomText: "With great power comes great electricity bill",
+    randomText: "",
     author: "- Dr. Who",
-    quoteSvg: "/images/quote“.svg",
   },
 ];
 
