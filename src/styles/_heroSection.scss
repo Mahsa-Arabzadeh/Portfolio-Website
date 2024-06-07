@@ -5,7 +5,7 @@
     padding: 40px 0px;
     @include display(flex,space-between,center);
     .introduction-hero{
-        width: 537px;
+        width: 50%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -32,7 +32,6 @@
     }
     // profile part:
     .hero-image{
-        width: 470px;
         height: 100%;
         .image-part{
             display: grid;
@@ -66,17 +65,59 @@
         // currently working on 
         .currently-work{
             @include display(flex,start,center);
+            width: 100%;
             border: 1px solid #ABB2BF;
             height: 37px;
             padding: 4px 12px;
             gap: 10px;
+            max-width: 100%;
+
             .squar-color{
-                width: 16px;
-                height: 16px;
+                width: 2vh;
+                height: 2vh;
                 background-color: #C778DD;
             }
+
+            :nth-child(2){
+                background-color: red;
+                font-size: 13px;
+            }
+
             .working-on{
+                height: 100%;
                 color: #fff;
+                width: 60%;
+            }
+        }
+    }
+}
+
+// max width 
+@media screen and (max-width: 1107px) {
+
+    #hero-section{
+        flex-direction: column;
+        justify-content: center;
+
+        // introduction-hero
+        .introduction-hero{
+            width: 100%;
+            .contactMeBtn{
+                display: none;
+            }
+        }
+        // hero image part
+        .hero-image{
+            .profile-image{
+            }
+            .currently-work{
+                // max-width: 100%;
+                :nth-child(2){
+                    // font-size: 13px;
+                    }
+                    .working-on{
+                    // font-size: 10px;
+                }
             }
         }
     }
