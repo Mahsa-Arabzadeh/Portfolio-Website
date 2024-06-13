@@ -5,8 +5,8 @@ import topSeciton from "../topSections/topSection";
 import mainProjects from "./mainProject";
 import button from "../buttonComponent/button";
 
-function projectSection() {
-  const projectSection = domGenerator({
+export default function projectSection() {
+  return domGenerator({
     tag: "section",
     attributes: { class: "projects-section" },
     children: [
@@ -21,6 +21,7 @@ function projectSection() {
             tag: button({
               startImg: "/images/View all ~~_.svg",
               btnSize: "large",
+              btnClass: "view-all",
               eventListeners: {
                 click: () => {
                   window.location.href = "/projects.html";
@@ -35,8 +36,4 @@ function projectSection() {
       },
     ],
   });
-
-  return projectSection;
 }
-
-export default projectSection;

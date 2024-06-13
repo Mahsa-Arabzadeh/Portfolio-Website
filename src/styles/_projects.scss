@@ -1,6 +1,5 @@
 @import "mixin";
 
-
 // style to top section of projects: 
 .projects-section{
     @include display(flex,start,start);
@@ -10,17 +9,27 @@
     .project-sec-top{
         @include display(flex,space-between,center);
         width: 100%;
+        .left-part{
+            min-width: 50%;
+        }
+        .view-all{
+            max-width: 40%;
+        }
     }
     // project main part:
     .project-sec-main{
         @include display(flex,center,start);
         gap: 16px;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        background-color: red;
+        overflow: hidden;
+        width: 100%;
         .card-project{
             @include display(flex,center,center);
             flex-direction: column;
             border: 1px solid #ABB2BF;
             transition: all 1s;
+            max-width: 100%;
             &:nth-child(n+4){
                 display: none;
             }
@@ -28,19 +37,23 @@
                 animation: ring 1.2s ;
             }
             .project-banner{
-                width: 350px;
-                height: 200px;
+            height: 200px;
+            max-width: 100%;
             }
             .tools-project{
                 width: 100%;
                 padding: 8px;
                 border: 1px solid #ABB2BF;
             }
+            .description-title{
+                max-width: 100%;
+            }
             .description-project{
                 @include display(flex,center,center);
                 flex-direction: column;
                 gap: 16px;
                 padding: 16px;
+                max-width: 100%;
                 .description-title{
                     font-size: 24px;
                     color: #fff;
@@ -48,8 +61,11 @@
                 }
                 .btn-part{
                     @include display(flex,start,center);
-                    width: 100%;
                     gap: 16px;
+                    max-width: 100%;
+                    *{
+                        width: 100%;
+                    }
                 }
             }
         }

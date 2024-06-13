@@ -3,7 +3,6 @@
 .quote-section{
     @include display(flex,center,center);
     flex-direction: column;
-    padding: 80px 0px;
     .border-container{
         @include display(flex,center,end);
         flex-direction: column;
@@ -28,5 +27,14 @@
             right: 20px;
             padding: 8px;
         }
+    }
+}
+
+
+// * media queries ------------------------------
+// ? add padding to quote in query 1107
+@media screen and (max-width: 1107px){
+    .quote-section{
+        padding: 80px 0px 30px 0px;
     }
 }
