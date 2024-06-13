@@ -9,3 +9,11 @@
         max-width: 1150px;
     }
 }
+
+
+// ? add media query
+@media screen and (max-width: 1107px) {
+    .main{
+        padding-top: 120px;
+    }
+}
