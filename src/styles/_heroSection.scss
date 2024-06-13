@@ -20,9 +20,7 @@
             }
         }
         .introduction-p{
-            height: 50px;
             font-size: 16px;
-            line-height: 25px;
             word-spacing: 3px;
             line-height: 20px;
         }
@@ -32,7 +30,6 @@
     }
     // profile part:
     .hero-image{
-        height: 100%;
         .image-part{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -65,12 +62,10 @@
         // currently working on 
         .currently-work{
             @include display(flex,start,center);
-            width: 100%;
             border: 1px solid #ABB2BF;
-            height: 37px;
             padding: 4px 12px;
-            gap: 10px;
-            max-width: 100%;
+            gap: 12px;
+            min-width: 100%;
 
             .squar-color{
                 width: 2vh;
@@ -78,46 +73,60 @@
                 background-color: #C778DD;
             }
 
-            :nth-child(2){
-                // background-color: red;
-                font-size: 13px;
-            }
-
             .working-on{
                 height: 100%;
                 color: #fff;
-                width: 60%;
+            }
+        }
+    }
+}
+// * queries -------------------------------------------
+//? max width 
+@media screen and (max-width: 700px){
+    #hero-section{
+        height: fit-content;
+        padding: 0;
+        // introduction-hero
+        .introduction-hero{
+            .contactMeBtn{
+                margin-top: 10px;
+                display: block;
+            }
+        }
+        .hero-image{
+            display: none;
+        }
+    }
+}
+
+// ? in media query 700 image part will show
+@media screen and (min-width: 700px){
+    #hero-section{
+        // introduction-hero
+        .introduction-hero{
+            .contactMeBtn{
+                display: none;
             }
         }
     }
 }
 
-// max width 
 @media screen and (max-width: 1107px) {
-
     #hero-section{
         flex-direction: column;
         justify-content: center;
-
         // introduction-hero
         .introduction-hero{
             width: 100%;
-            .contactMeBtn{
-                display: none;
-            }
         }
-        // hero image part
-        .hero-image{
-            .profile-image{
-            }
-            .currently-work{
-                // max-width: 100%;
-                :nth-child(2){
-                    // font-size: 13px;
-                    }
-                    .working-on{
-                    // font-size: 10px;
-                }
+    }
+}
+
+@media screen and (min-width: 1107px) {
+    #hero-section{
+        .introduction-hero{
+            .contactMeBtn{
+                display: block;
             }
         }
     }

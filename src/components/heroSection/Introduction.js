@@ -5,7 +5,7 @@ import heroData from "./data";
 import button from "../buttonComponent/button";
 
 export default function introductionHero(props) {
-  let { skill } = props;
+  let { skill, text } = props;
   return domGenerator({
     tag: "div",
     attributes: { class: "introduction-hero" },
@@ -33,8 +33,7 @@ export default function introductionHero(props) {
         tag: "p",
         attributes: { class: "introduction-p" },
         properties: {
-          textContent:
-            "He crafts responsive websites where technologies meet creativity He crafts responsive websites where technologies meet creativity",
+          textContent: (text = heroData.map((data) => data.text).join("")),
         },
       },
       {
