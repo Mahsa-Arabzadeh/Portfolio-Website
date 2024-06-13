@@ -1,7 +1,6 @@
 "use strict";
 
 import domGenerator from "dom-generator";
-import selectLang from "./language";
 import navBarGenerator from "./navBar";
 import { logoData } from "../logoGenerator/data";
 import logoGenerator from "../logoGenerator/logoGenerator";
@@ -23,9 +22,6 @@ export default function headerGenerator() {
           {
             tag: navBarGenerator(),
           },
-          {
-            tag: selectLang(),
-          },
         ],
       },
       {
@@ -37,10 +33,6 @@ export default function headerGenerator() {
           },
         },
       },
-      // {
-      //   tag: "div",
-      //   attributes: { class: "overlay" },
-      // },
     ],
   });
 }
