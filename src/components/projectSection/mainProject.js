@@ -3,6 +3,17 @@
 import domGenerator from "dom-generator";
 import { projects } from "./data";
 import button from "../buttonComponent/button";
+// * swiper js
+import Swiper from "swiper";
+// import Swiper styles
+import "swiper/css";
+
+// function swiperCard() {
+//    new Swiper(".mySwiper", {
+//     effect: "cards",
+//     grabCursor: true,
+//   });
+// }
 
 export function cards(props) {
   let { bannerProject, tools, title, paragraph } = props;
