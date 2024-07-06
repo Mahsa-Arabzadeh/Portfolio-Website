@@ -1,45 +1,54 @@
 @import "mixin";
 
-#hero-section{
+#hero-section {
     height: 483px;
     padding: 40px 0px;
-    @include display(flex,space-between,center);
-    .introduction-hero{
+    @include display(flex, space-between, center);
+
+    .introduction-hero {
         width: 50%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-        .introduction-title{
+
+        .introduction-title {
             font-size: 32px;
             word-spacing: 7px;
             line-height: 36px;
-            .colorPurpleSpan{
+
+            .colorPurpleSpan {
                 color: #C778DD;
             }
         }
-        .introduction-p{
+
+        .introduction-p {
             font-size: 16px;
             word-spacing: 3px;
             line-height: 20px;
         }
-        .contactMeBtn{
+
+        .contactMeBtn {
             color: #fff;
         }
     }
+
     // profile part:
-    .hero-image{
-        .image-part{
+    .hero-image {
+        .image-part {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
             position: relative;
             height: 386px;
-            .profile-image{
+            width: 450px;
+
+            .profile-image {
                 position: absolute;
             }
-            .shape-purple{
+
+            .shape-purple {
                 width: 155px;
                 height: 155px;
                 grid-column-start: 1;
@@ -49,7 +58,8 @@
                 top: 80px;
                 left: 0;
             }
-            .shape-doted{
+
+            .shape-doted {
                 width: 84px;
                 height: 84px;
                 grid-row-end: 5;
@@ -59,52 +69,57 @@
                 left: 0;
             }
         }
+
         // currently working on 
-        .currently-work{
-            @include display(flex,start,center);
+        .currently-work {
+            @include display(flex, center, center);
             border: 1px solid #ABB2BF;
             padding: 4px 12px;
             gap: 12px;
-            min-width: 100%;
+            max-width: 100%;
 
-            .squar-color{
+            .squar-color {
                 width: 2vh;
                 height: 2vh;
                 background-color: #C778DD;
             }
 
-            .working-on{
+            .working-on {
                 height: 100%;
                 color: #fff;
             }
         }
     }
 }
+
 // * queries -------------------------------------------
 //? max width 
-@media screen and (max-width: 700px){
-    #hero-section{
+@media screen and (max-width: 700px) {
+    #hero-section {
         height: fit-content;
         padding: 0;
+
         // introduction-hero
-        .introduction-hero{
-            .contactMeBtn{
+        .introduction-hero {
+            .contactMeBtn {
                 margin-top: 10px;
                 display: block;
             }
         }
-        .hero-image{
+
+        .hero-image {
             display: none;
         }
     }
 }
 
 // ? in media query 700 image part will show
-@media screen and (min-width: 700px){
-    #hero-section{
+@media screen and (min-width: 700px) {
+    #hero-section {
+
         // introduction-hero
-        .introduction-hero{
-            .contactMeBtn{
+        .introduction-hero {
+            .contactMeBtn {
                 display: none;
             }
         }
@@ -112,20 +127,21 @@
 }
 
 @media screen and (max-width: 1107px) {
-    #hero-section{
+    #hero-section {
         flex-direction: column;
         justify-content: center;
+
         // introduction-hero
-        .introduction-hero{
+        .introduction-hero {
             width: 100%;
         }
     }
 }
 
 @media screen and (min-width: 1107px) {
-    #hero-section{
-        .introduction-hero{
-            .contactMeBtn{
+    #hero-section {
+        .introduction-hero {
+            .contactMeBtn {
                 display: block;
             }
         }

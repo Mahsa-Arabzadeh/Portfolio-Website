@@ -15,7 +15,7 @@ export default function skillSection() {
       },
       {
         tag: "div",
-        attributes: { class: "main-section" },
+        attributes: { class: "main-section-skill" },
         children: [
           {
             tag: leftSection(),

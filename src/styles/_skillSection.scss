@@ -1,7 +1,7 @@
 @import "mixin";
 
 .skill-section{
-    .main-section{
+    .main-section-skill{
         @include display(flex,space-between,start);
         padding: 40px 0px;
         gap: 16px;
@@ -48,7 +48,6 @@
                 }
             }
         }
-
         // right section(cards)
         .right-section{
             @include display(flex,start,start);
@@ -75,7 +74,6 @@
         }
     }
 }
-
 // * queries -------------------------------------------
 // * max width 400px
 @media screen and (max-width: 500px){

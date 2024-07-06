@@ -89,6 +89,9 @@ export const columnData = [
         {
           skill: "Vite",
         },
+        {
+          skill: "Jira",
+        },
       ],
     },
     // second card in second column
@@ -97,6 +100,9 @@ export const columnData = [
       skills: [
         {
           skill: "React",
+        },
+        {
+          skill: "TailWind",
         },
       ],
     },
