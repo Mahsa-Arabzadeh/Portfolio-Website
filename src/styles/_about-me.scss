@@ -37,13 +37,19 @@
 // * media queries
 @media screen and (max-width: 840px) {
     .main-section{
-        background-color: red;
+        padding: 40px 0px;
         .image-about{
             display: none !important;
+        }
+        .about-me-left{
+            gap: 18px !important;
+        }
+        .about-me-paragraph{
+            &:nth-child(n+3){
+                display: none;
+            }
         }
     }
 }
 
 // TODO: 
-// REMOVE PIC
-// REMOVE 2TH PARAGRAPH

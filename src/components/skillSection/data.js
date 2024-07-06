@@ -92,6 +92,9 @@ export const columnData = [
         {
           skill: "Jira",
         },
+        {
+          skill: "Jest",
+        },
       ],
     },
     // second card in second column

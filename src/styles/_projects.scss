@@ -1,67 +1,81 @@
 @import "mixin";
 
 // style to top section of projects: 
-.projects-section{
-    @include display(flex,start,start);
+.projects-section {
+    @include display(flex, start, start);
     gap: 48px;
     flex-direction: column;
     padding: 40px 0px;
-    .project-sec-top{
-        @include display(flex,space-between,center);
+
+    .project-sec-top {
+        @include display(flex, space-between, center);
         width: 100%;
-        .left-part{
+
+        .left-part {
             min-width: 50%;
         }
-        .view-all{
+
+        .view-all {
             max-width: 40%;
         }
     }
+
     // project main part:
-    .project-sec-main{
-        @include display(flex,center,start);
+    .project-sec-main {
+        @include display(flex, center, start);
         gap: 16px;
         overflow: hidden;
         width: 100%;
-        .card-project{
-            @include display(flex,center,center);
+
+        .card-project {
+            @include display(flex, center, center);
             flex-direction: column;
             border: 1px solid #ABB2BF;
             transition: all 1s;
             max-width: 100%;
-            &:nth-child(n+4){
+
+            &:nth-child(n+4) {
                 display: none;
             }
-            &:hover{
-                animation: ring 1.2s ;
+
+            &:hover {
+               background-color: #c778dd15;
             }
-            .project-banner{
-            height: 200px;
-            max-width: 100%;
+
+            .project-banner {
+                height: 200px;
+                max-width: 100%;
             }
-            .tools-project{
+
+            .tools-project {
                 width: 100%;
                 padding: 8px;
                 border: 1px solid #ABB2BF;
             }
-            .description-title{
+
+            .description-title {
                 max-width: 100%;
             }
-            .description-project{
-                @include display(flex,center,center);
+
+            .description-project {
+                @include display(flex, center, center);
                 flex-direction: column;
                 gap: 16px;
                 padding: 16px;
                 max-width: 100%;
-                .description-title{
+
+                .description-title {
                     font-size: 24px;
                     color: #fff;
                     width: 300px;
                 }
-                .btn-part{
-                    @include display(flex,start,center);
+
+                .btn-part {
+                    @include display(flex, start, center);
                     gap: 16px;
                     max-width: 100%;
-                    *{
+
+                    * {
                         width: 100%;
                     }
                 }
@@ -70,24 +84,13 @@
     }
 }
 
-@keyframes ring {
-    30%{
-        transform: rotate3d(1,1,1,-3deg);
-        
-    }
-    60%{
-        transform: rotate3d(1,1,1,3deg);
-    }
-}
-
-
 // ? swiper styles 
 .swiper {
     width: 240px;
     height: 320px;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,8 +98,8 @@
     font-size: 22px;
     font-weight: bold;
     color: #fff;
-  }
+}
 
-  .swiper-slide:nth-child(1n) {
+.swiper-slide:nth-child(1n) {
     background-color: rgb(206, 17, 17);
-  }
+}
