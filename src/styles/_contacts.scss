@@ -4,11 +4,11 @@
     .main-contacts{
         @include display(flex,center,center);
         .contact-form{
-            @include display(flex,center,start);
+            @include display(flex,center,center);
             flex-direction: column;
             gap: 16px;
             padding: 40px 0px;
-            width: 43vw;
+            width: 100vh;
             .top-form{
                 @include display(flex,center,center);
                 gap: 16px;
@@ -44,7 +44,7 @@
 }
 
 
-// * media queries 
+// * media queries
 @media screen and (max-width: 900px){
     .main-contacts{
         .contact-form{

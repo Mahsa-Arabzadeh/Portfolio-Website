@@ -9,7 +9,7 @@ const heroData = [
     profileImage: "/images/Imagehero.svg",
   },
   {
-    workOn: "Specialized JavaScript",
+    workOn: "ReactJs and Specialized JS",
   },
   {
     skill: "Front-End Developer",
