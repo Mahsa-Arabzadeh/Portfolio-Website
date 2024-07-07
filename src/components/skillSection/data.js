@@ -50,6 +50,9 @@ export const columnData = [
         {
           skill: "SCSS",
         },
+        {
+          skill: "RegEx",
+        },
       ],
     },
   ],
