@@ -8,7 +8,7 @@
             flex-direction: column;
             gap: 16px;
             padding: 40px 0px;
-            width: 36vw;
+            width: 43vw;
             .top-form{
                 @include display(flex,center,center);
                 gap: 16px;
@@ -39,6 +39,16 @@
                 color: #fff;
                 padding: 4px 24px;
             }
+        }
+    }
+}
+
+
+// * media queries 
+@media screen and (max-width: 900px){
+    .main-contacts{
+        .contact-form{
+            width: 100% !important;
         }
     }
 }
