@@ -79,9 +79,12 @@
             max-width: 100%;
 
             .squar-color {
-                width: 2vh;
-                height: 2vh;
-                background-color: #C778DD;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 2px #4dff0080, 0 0 0 4px #4dff0040, 0 0 0 6px #4dff0020, 0 0 0 8px #4dff0010, 0 0 0 10px #4dff0000, 0 0 4px 10px #4dff0010;
+                animation: work 2s infinite linear forwards, reys 2s 2s infinite linear;
+                background-color: #4dff0080;
             }
 
             .working-on {
@@ -145,5 +148,26 @@
                 display: block;
             }
         }
+    }
+}
+
+
+// * set the keyframes for current work 
+@keyframes work {
+    0% {
+        box-shadow: none;
+    }
+}
+
+@keyframes reys {
+    0% {
+        box-shadow: 0 0 0 0px #4dff0080, 0 0 0 4px #4dff0080, 0 0 0 6px #4dff0040, 0 0 0 8px #4dff0020, 0 0 0 10px #4dff0010, 0 0 6px 12px #4dff0010;
+    }
+
+    50% {
+        box-shadow: 0 0 0 2px #4dff0080, 0 0 0 4px #4dff0040, 0 0 0 6px #4dff0020, 0 0 0 8px #4dff0010, 0 0 0 10px #4dff0000, 0 0 4px 10px #4dff0010;
+    }
+    100% {
+        box-shadow: 0 0 0 4px #4dff0080, 0 0 0 6px #4dff0040, 0 0 0 8px #4dff0020, 0 0 0 10px #4dff0010, 0 0 0 12px #4dff0000, 0 0 6px 12px #4dff0010;
     }
 }
