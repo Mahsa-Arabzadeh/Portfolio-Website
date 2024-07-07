@@ -52,6 +52,42 @@
 }
 
 // * media queries 
-@media screen and (max-width: 900px){
-    
+@media screen and (max-width: 700px){
+
+    #footer{
+        gap: 23px;
+        .top-footer{
+            flex-direction: column;
+            gap: 16px;
+            .left-footer{
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+        #copy-right{
+            .copy-right-logo{
+                width: 12px;
+            }
+            p{
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 330px){
+    .top-footer{
+        .left-footer{
+            align-items: center;
+            .left-email{
+                width: 100%;
+                gap: 8px !important;
+                flex-direction: column;
+            }
+            .carrier-text{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
 }
