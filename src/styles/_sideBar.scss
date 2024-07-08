@@ -1,38 +1,69 @@
 @import "mixin";
 
-.side-bar{
-    background-color: #191a1d;
-    position: fixed;
-    height: 100vh;
-    width: 50vw;
-    z-index: 1100;
-    display: none;
-    #nav-bar{
-        .li-nav{
-            padding: 16px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: 600;
-            .sharp-nav{
-                color: #C778DD;
-            }
-            .text-nav{
-                transition: .3s;
-                color: #ABB2BF;
-                &:hover{
-                    color: #FFFFFF;
-                }
-            }
+.side-bar {
+  background-color: #282c33;
+  position: fixed;
+  height: 100vh;
+  width: 50vw;
+  z-index: 1100;
+  display: none;
+  animation: 1s moveSidebar;
+  #nav-bar {
+    .li-nav {
+      padding: 16px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      .sharp-nav {
+        color: #c778dd;
+      }
+      .text-nav {
+        transition: 0.3s;
+        color: #abb2bf;
+        &:hover {
+          color: #ffffff;
         }
+      }
     }
+  }
 }
 
+.overlay {
+  display: none;
+  /* Initially hide the overlay */
+  position: fixed;
+  /* Fixed positioning */
+  top: 0;
+  /* Position from the top */
+  left: 0;
+  /* Position from the left */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+  backdrop-filter: blur(5px);
+  /* Blur effect */
+  z-index: 2;
+  /* Stack order, ensure overlay appears above other content */
+}
 
-// media query
-
+// * media query
 // max-width 700px
-@media screen and (max-width: 700px){
-    .side-bar{
-    @include display(flex,start,start);
-    }
+@media screen and (max-width: 700px) {
+  .side-bar {
+    @include display(flex, start, start);
+  }
+}
+
+//* animation for movement of sidebar
+@keyframes moveSidebar {
+  0% {
+    left: -100px;
+  }
+
+  100% {
+    left: 0px;
+  }
 }
