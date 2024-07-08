@@ -51,7 +51,6 @@ function leftFooter(props) {
 
 function mediaFooter() {
   const mediaImg = footerData.media.map((data) => {
-    console.log(data);
     return { tag: mediaImgGenerator(data.imgSrc, data.href) };
   });
 

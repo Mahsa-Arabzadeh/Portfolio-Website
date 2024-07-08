@@ -39,6 +39,16 @@ function listNavGenerator(textItem) {
   const liNav = domGenerator({
     tag: "li",
     attributes: { class: "li-nav" },
+    eventListeners: {
+      click: () => {
+        document
+          .querySelector(".skill-section")
+          .scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          window.scrollBy(0, 100);
+        }, 500);
+      },
+    },
     children: [
       {
         tag: "span",
