@@ -3,21 +3,25 @@ import domGenerator from "dom-generator";
 const dataItemNav = [
   {
     textItem: "home",
+    sectionAddress: "#hero-section",
   },
   {
     textItem: "works",
+    sectionAddress: ".projects-section",
   },
   {
     textItem: "about-me",
+    sectionAddress: ".about-section",
   },
   {
     textItem: "contacts",
+    sectionAddress: ".section-contactme",
   },
 ];
 
 export function navBarGenerator() {
   const liNav = dataItemNav.map((item) => {
-    const liTag = listNavGenerator(item.textItem);
+    const liTag = listNavGenerator(item.textItem, item.sectionAddress);
 
     return {
       tag: liTag,
@@ -35,18 +39,15 @@ export function navBarGenerator() {
   return navBar;
 }
 
-function listNavGenerator(textItem) {
+function listNavGenerator(textItem, sectionAddress) {
   const liNav = domGenerator({
     tag: "li",
     attributes: { class: "li-nav" },
     eventListeners: {
       click: () => {
         document
-          .querySelector(".skill-section")
+          .querySelector(sectionAddress)
           .scrollIntoView({ behavior: "smooth" });
-        setTimeout(() => {
-          window.scrollBy(0, 100);
-        }, 500);
       },
     },
     children: [
