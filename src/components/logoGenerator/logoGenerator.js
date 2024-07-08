@@ -10,11 +10,12 @@ export default function logoGenerator(props) {
     attributes: { id: "logo-container" },
     eventListeners: {
       click: () => {
-        const heroSectionVar = domGenerator({
-          tag: heroSection(),
-        });
-
-        heroSectionVar.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("hero-section")
+          .scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          window.scrollBy(0, -100);
+        }, 630);
       },
     },
     children: [
