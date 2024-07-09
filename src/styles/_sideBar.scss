@@ -49,6 +49,11 @@
   /* Stack order, ensure overlay appears above other content */
 }
 
+// * close the sidebar
+.hidden {
+  display: none;
+}
+
 // * media query
 // max-width 700px
 @media screen and (max-width: 700px) {

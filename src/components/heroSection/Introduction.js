@@ -42,6 +42,13 @@ export default function introductionHero(props) {
           btnSize: "small",
           shape: "primary-border",
           btnClass: "contactMeBtn",
+          eventListeners: {
+            click: () => {
+              document
+                .querySelector(".section-contactme")
+                .scrollIntoView({ behavior: "smooth" });
+            },
+          },
         }),
       },
     ],

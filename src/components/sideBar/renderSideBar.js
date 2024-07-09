@@ -4,6 +4,8 @@ import domGenerator from "dom-generator";
 import navBarGenerator from "../header/navBar";
 
 export default function sideBar() {
+  closeSidebar();
+
   return domGenerator({
     tag: "div",
     attributes: { class: "side-bar" },
@@ -16,5 +18,11 @@ export default function sideBar() {
         attributes: { class: "overlay" },
       },
     ],
+  });
+}
+
+export function closeSidebar() {
+  document.addEventListener("click", (e) => {
+    console.log(e);
   });
 }
