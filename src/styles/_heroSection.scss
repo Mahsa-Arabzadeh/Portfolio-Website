@@ -1,8 +1,7 @@
 @import "mixin";
 
 #hero-section {
-  height: 483px;
-  padding: 40px 0px;
+  height: 515px;
   @include display(flex, space-between, center);
 
   .introduction-hero {

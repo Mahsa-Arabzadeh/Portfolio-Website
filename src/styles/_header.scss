@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
   background-color: var(--primary-color);
   padding: 0px 30px;
   .nav-container {

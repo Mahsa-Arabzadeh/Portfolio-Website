@@ -1,6 +1,8 @@
 @import "mixin";
 
 .about-section {
+  padding-top: 55px;
+
   .main-section {
     @include display(flex, space-between, center);
     .about-me-left {

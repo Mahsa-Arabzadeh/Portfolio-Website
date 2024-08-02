@@ -1,9 +1,10 @@
 @import "mixin";
 
 .skill-section {
+  padding-top: 55px;
   .main-section-skill {
     @include display(flex, space-between, start);
-    padding: 40px 0px;
+    padding-top: 40px;
     gap: 16px;
     // overflow: hidden;
     // left section

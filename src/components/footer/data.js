@@ -16,6 +16,6 @@ export const footerData = {
     },
   ],
   copyRight: {
-    copyRightText: "Copyright 2022. Made by Elias",
+    copyRightText: "Copyright 2024. Development By 💗 Mahsa Arabzadeh",
   },
 };

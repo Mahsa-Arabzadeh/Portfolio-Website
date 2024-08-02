@@ -7,7 +7,7 @@ export const emailAddress = "arabzadehmah@gmail.com";
 export const github = "https://github.com/Mahsa-Arabzadeh";
 
 // discord link
-export const discord = "";
+export const discord = "https://discord.com/invite/Mahsaxtz#2683";
 
 // userName
 export const userName = "Mahsa";

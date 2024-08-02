@@ -5,7 +5,7 @@
   @include display(flex, start, start);
   gap: 48px;
   flex-direction: column;
-  padding: 40px 0px;
+  padding-top: 55px;
 
   .project-sec-top {
     @include display(flex, space-between, center);

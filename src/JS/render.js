@@ -1,9 +1,11 @@
 "use strict";
 import domGenerator from "dom-generator";
 
+const app = document.querySelector("#app");
+
 export function prepend(...elements) {
   const prepend = elements.forEach((element) => {
-    document.body.prepend(element);
+    app.prepend(element);
   });
 
   return prepend;
@@ -11,13 +13,11 @@ export function prepend(...elements) {
 
 export function append(...elements) {
   return elements.forEach((elem) => {
-    document.body.appendChild(elem);
+    app.appendChild(elem);
   });
 }
 
 export function render(...elements) {
-  const app = document.querySelector("#app");
-
   const main = domGenerator({
     tag: "div",
     attributes: { class: "main" },
@@ -29,7 +29,7 @@ export function render(...elements) {
   });
 
   main.appendChild(container);
-  document.body.appendChild(main);
+  app.appendChild(main);
 
   return (render = elements.forEach((element) => {
     container.appendChild(element);

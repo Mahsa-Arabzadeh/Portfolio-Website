@@ -1,6 +1,7 @@
 @import "mixin";
 
 .section-contactme {
+  padding-top: 55px;
   .main-contacts {
     @include display(flex, center, center);
     .contact-form {
