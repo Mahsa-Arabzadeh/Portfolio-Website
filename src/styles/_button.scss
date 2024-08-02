@@ -1,38 +1,38 @@
 @import "mixin";
 
-
-.btn-default{
-    @include display(flex,center,center);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    &[data-size = "large"]{
-        padding: 16px 24px;
+.btn-default {
+  @include display(flex, center, center);
+  background-color: transparent;
+  border: none;
+  cursor: none;
+  &[data-size="large"] {
+    padding: 16px 24px;
+  }
+  &[data-size="small"] {
+    width: fit-content;
+    padding: 8px 16px;
+  }
+  &[data-shape="primary-border"] {
+    border: 1px solid var(--secondry-color);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: var(--secondry-low) 0px 10px 15px -2px,
+        var(--secondry-low-level-2) 0px 5px 5px -2px;
     }
-    &[data-size = "small"]{
-        width: fit-content;
-        padding: 8px 16px;
+    &:active {
+      transform: scale(0.8);
+      background-color: var(--secondry-low);
     }
-    &[data-shape = "primary-border"]{
-        border: 1px solid #C778DD;
-        transition: .3s;
-        &:hover{
-            box-shadow: #583f5f67 0px 10px 15px -2px, #c778dd31 0px 5px 5px -2px;
-        }
-        &:active{
-            transform: scale(.7);
-            background-color: #c778dd23;
-        }
+  }
+  &[data-shape="secondry-border"] {
+    border: 1px solid var(--text-color);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: #abb2bf26 0px 10px 15px -2px, #abb2bf12 0px 5px 5px -2px;
     }
-    &[data-shape = "secondry-border"]{
-        border: 1px solid #ABB2BF;
-        transition: .3s;
-        &:hover{
-            box-shadow: #abb2bf26 0px 10px 15px -2px, #abb2bf12 0px 5px 5px -2px;
-        }
-        &:active{
-            transform: scale(.7);
-            background-color: #abb2bf21;
-        }
+    &:active {
+      transform: scale(0.8);
+      background-color: #abb2bf21;
     }
+  }
 }

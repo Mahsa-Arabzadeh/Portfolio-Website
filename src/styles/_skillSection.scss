@@ -1,113 +1,113 @@
 @import "mixin";
 
-.skill-section{
-    .main-section-skill{
-        @include display(flex,space-between,start);
-        padding: 40px 0px;
-        gap: 16px;
-        // overflow: hidden;
-        // left section
-        .left-section{
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            max-width: 50%;
-            // width: 440px;
-            .row-left-sec{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                grid-template-rows:  1fr;
-                &:nth-child(1){
-                    .imgsrc1{
-                        grid-row-start: 1;
-                        grid-column-start: 1;
-                        width: 63px;
-                        margin-top: 40px;
-                }
-                .imgsrc3{
-                    grid-row-start: 1;
-                    grid-column-start: 4;
-                }
-                }
-                &:nth-child(2){
-                    .imgsrc1{
-                        margin-top: 20px;
-                        margin-left: 20px;
-                        width: 113px;
-                    }
-                    .imgsrc2{
-                        margin-left: 20px;
-                        width: 63px;
-                    }
-                    .imgsrc3{
-                        grid-row-start: 1;
-                        grid-column-start: 4;
-                        margin-top: 60px;
-                        width: 52px;
-                    }
-                }
-            }
+.skill-section {
+  .main-section-skill {
+    @include display(flex, space-between, start);
+    padding: 40px 0px;
+    gap: 16px;
+    // overflow: hidden;
+    // left section
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 50%;
+      // width: 440px;
+      .row-left-sec {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        &:nth-child(1) {
+          .imgsrc1 {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            width: 63px;
+            margin-top: 40px;
+          }
+          .imgsrc3 {
+            grid-row-start: 1;
+            grid-column-start: 4;
+          }
         }
-        // right section(cards)
-        .right-section{
-            @include display(flex,start,start);
-            gap: 16px;
-            max-width:  50%;
-            .column-section{
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                min-width:30%;
-                .skill-card{
-                    border: 1px solid #ABB2BF;
-                    .title-card{
-                        padding: 8px;
-                        color: #fff;
-                        font-size: 16px;
-                        border: 1px solid #ABB2BF;
-                    }
-                    .desc-card{
-                        padding: 8px;
-                    }
-                }
-            }
+        &:nth-child(2) {
+          .imgsrc1 {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 113px;
+          }
+          .imgsrc2 {
+            margin-left: 20px;
+            width: 63px;
+          }
+          .imgsrc3 {
+            grid-row-start: 1;
+            grid-column-start: 4;
+            margin-top: 60px;
+            width: 52px;
+          }
         }
+      }
     }
+    // right section(cards)
+    .right-section {
+      @include display(flex, start, start);
+      gap: 16px;
+      max-width: 50%;
+      .column-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 30%;
+        .skill-card {
+          border: 1px solid var(--text-color);
+          .title-card {
+            padding: 8px;
+            color: var(--white-color);
+            font-size: 16px;
+            border: 1px solid var(--text-color);
+          }
+          .desc-card {
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
 }
 // * queries -------------------------------------------
 // * max width 400px
-@media screen and (max-width: 500px){
-    .skill-section{
-        width: 100%;
-        // ? right section styles
-        .right-section{
-            .column-section{
-                .skill-card{
-                    .desc-card{
-                        font-size: 12px;
-                    }
-                }
-            }
+@media screen and (max-width: 500px) {
+  .skill-section {
+    width: 100%;
+    // ? right section styles
+    .right-section {
+      .column-section {
+        .skill-card {
+          .desc-card {
+            font-size: 12px;
+          }
         }
+      }
     }
+  }
 }
 //* max width 700px
-@media screen and (max-width: 700px){
-    .skill-section{
-        .left-section{
-            display: none !important;
-        }
-        // ? right section styles
-        .right-section{
-            max-width: 100% !important;
-            .column-section{
-                .skill-card{
-                    overflow: hidden;
-                    .title-card{
-                        font-size: 13px !important;
-                    }
-                }
-            }
-        }
+@media screen and (max-width: 700px) {
+  .skill-section {
+    .left-section {
+      display: none !important;
     }
+    // ? right section styles
+    .right-section {
+      max-width: 100% !important;
+      .column-section {
+        .skill-card {
+          overflow: hidden;
+          .title-card {
+            font-size: 13px !important;
+          }
+        }
+      }
+    }
+  }
 }

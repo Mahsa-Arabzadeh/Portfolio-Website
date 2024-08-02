@@ -3,10 +3,8 @@
 import domGenerator from "dom-generator";
 import navBarGenerator from "../header/navBar";
 
-export default function sideBar() {
-  closeSidebar();
-
-  return domGenerator({
+export default function sideBar(sidebarElement) {
+  sidebarElement = domGenerator({
     tag: "div",
     attributes: { class: "side-bar" },
     children: [
@@ -19,10 +17,16 @@ export default function sideBar() {
       },
     ],
   });
+
+  return sidebarElement;
 }
 
-export function closeSidebar() {
-  document.addEventListener("click", (e) => {
-    console.log(e);
-  });
+document.addEventListener("click", closeSidebar);
+
+function closeSidebar(e) {
+  if (!sideBar(sidebarElement).contains(e.target)) {
+    console.log("mash");
+    sidebarElement.style.color = "red";
+    // blurOverly.style.display = "none";
+  }
 }

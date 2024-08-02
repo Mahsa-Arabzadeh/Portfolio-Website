@@ -1,54 +1,53 @@
 @import "mixin";
 
-.section-contactme{
-    .main-contacts{
-        @include display(flex,center,center);
-        .contact-form{
-            @include display(flex,center,center);
-            flex-direction: column;
-            gap: 16px;
-            padding: 40px 0px;
-            width: 100vh;
-            .top-form{
-                @include display(flex,center,center);
-                gap: 16px;
-                width: 90%;
-                input{
-                    width: 100%;
-                    background-color: transparent;
-                    border: 1px solid #ABB2BF;
-                    padding: 8px 8px;
-                }
-            }
-            .title-input{
-                background-color: transparent;
-                border: 1px solid #ABB2BF;
-                width: 90%;
-                padding: 8px 8px;
-            }
-            .textarea-input{
-                padding: 8px 8px;
-                border: 1px solid #ABB2BF;
-                resize: none;
-                background-color: transparent;
-                min-width: 90%;
-                outline: none;
-                min-height: 120px;
-            }
-            .send-btn{
-                color: #fff;
-                padding: 4px 24px;
-            }
+.section-contactme {
+  .main-contacts {
+    @include display(flex, center, center);
+    .contact-form {
+      @include display(flex, center, center);
+      flex-direction: column;
+      gap: 16px;
+      padding: 40px 0px;
+      width: 100vh;
+      .top-form {
+        @include display(flex, center, center);
+        gap: 16px;
+        width: 90%;
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: 1px solid var(--text-color);
+          padding: 8px 8px;
         }
+      }
+      .title-input {
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        width: 90%;
+        padding: 8px 8px;
+      }
+      .textarea-input {
+        padding: 8px 8px;
+        border: 1px solid var(--text-color);
+        resize: none;
+        background-color: transparent;
+        min-width: 90%;
+        outline: none;
+        min-height: 120px;
+      }
+      .send-btn {
+        color: var(--white-color);
+        padding: 4px 24px;
+      }
     }
+  }
 }
 
-
 // * media queries
-@media screen and (max-width: 900px){
-    .main-contacts{
-        .contact-form{
-            width: 100% !important;
-        }
+@media screen and (max-width: 900px) {
+  .main-contacts {
+    .contact-form {
+      width: 100% !important;
     }
+  }
 }

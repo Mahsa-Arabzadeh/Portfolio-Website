@@ -1,13 +1,13 @@
-#logo-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60px;
-    height: 21px;
-    cursor: pointer;
-    .logo-name{
-        color: #fff;
-        font-weight: 700;
-        font-size: 16px;
-    }
+#logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  height: 21px;
+  cursor: pointer;
+  .logo-name {
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 16px;
+  }
 }

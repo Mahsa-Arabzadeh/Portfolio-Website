@@ -1,173 +1,176 @@
 @import "mixin";
 
 #hero-section {
-    height: 483px;
-    padding: 40px 0px;
-    @include display(flex, space-between, center);
+  height: 483px;
+  padding: 40px 0px;
+  @include display(flex, space-between, center);
 
-    .introduction-hero {
-        width: 50%;
+  .introduction-hero {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    .introduction-title {
+      font-size: 32px;
+      word-spacing: 7px;
+      line-height: 36px;
+
+      .colorPurpleSpan {
+        color: var(--secondry-color);
+      }
+    }
+
+    .introduction-p {
+      font-size: 16px;
+      word-spacing: 3px;
+      line-height: 20px;
+    }
+
+    .contactMeBtn {
+      color: var(--white-color);
+    }
+  }
+
+  // profile part:
+  .hero-image {
+    .image-part {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      position: relative;
+      height: 386px;
+      width: 450px;
+
+      .profile-image {
+        position: absolute;
+      }
+
+      .shape-purple {
+        width: 155px;
+        height: 155px;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        z-index: -100;
+        position: absolute;
+        top: 80px;
+        left: 0;
+      }
+
+      .shape-doted {
+        width: 84px;
+        height: 84px;
+        grid-row-end: 5;
+        grid-column-start: 4;
+        position: absolute;
+        top: 230px;
+        left: 0;
+      }
+    }
+
+    // currently working on
+    .currently-work {
+      @include display(flex, center, center);
+      border: 1px solid var(--text-color);
+      padding: 4px 12px;
+      gap: 12px;
+      max-width: 100%;
+
+      .squar-color {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #4dff0080, 0 0 0 4px #4dff0040,
+          0 0 0 6px #4dff0020, 0 0 0 8px #4dff0010, 0 0 0 10px #4dff0000,
+          0 0 4px 10px #4dff0010;
+        animation: work 2s infinite linear forwards, reys 2s 2s infinite linear;
+        background-color: #4dff0080;
+      }
+
+      .working-on {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-
-        .introduction-title {
-            font-size: 32px;
-            word-spacing: 7px;
-            line-height: 36px;
-
-            .colorPurpleSpan {
-                color: #C778DD;
-            }
-        }
-
-        .introduction-p {
-            font-size: 16px;
-            word-spacing: 3px;
-            line-height: 20px;
-        }
-
-        .contactMeBtn {
-            color: #fff;
-        }
+        color: var(--white-color);
+      }
     }
-
-    // profile part:
-    .hero-image {
-        .image-part {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-            position: relative;
-            height: 386px;
-            width: 450px;
-
-            .profile-image {
-                position: absolute;
-            }
-
-            .shape-purple {
-                width: 155px;
-                height: 155px;
-                grid-column-start: 1;
-                grid-row-end: 4;
-                z-index: -100;
-                position: absolute;
-                top: 80px;
-                left: 0;
-            }
-
-            .shape-doted {
-                width: 84px;
-                height: 84px;
-                grid-row-end: 5;
-                grid-column-start: 4;
-                position: absolute;
-                top: 230px;
-                left: 0;
-            }
-        }
-
-        // currently working on 
-        .currently-work {
-            @include display(flex, center, center);
-            border: 1px solid #ABB2BF;
-            padding: 4px 12px;
-            gap: 12px;
-            max-width: 100%;
-
-            .squar-color {
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                box-shadow: 0 0 0 2px #4dff0080, 0 0 0 4px #4dff0040, 0 0 0 6px #4dff0020, 0 0 0 8px #4dff0010, 0 0 0 10px #4dff0000, 0 0 4px 10px #4dff0010;
-                animation: work 2s infinite linear forwards, reys 2s 2s infinite linear;
-                background-color: #4dff0080;
-            }
-
-            .working-on {
-                height: 100%;
-                color: #fff;
-            }
-        }
-    }
+  }
 }
 
 // * queries -------------------------------------------
-//? max width 
+//? max width
 @media screen and (max-width: 700px) {
-    #hero-section {
-        height: fit-content;
-        padding: 0;
+  #hero-section {
+    height: fit-content;
+    padding: 0;
 
-        // introduction-hero
-        .introduction-hero {
-            .contactMeBtn {
-                margin-top: 10px;
-                display: block;
-            }
-        }
-
-        .hero-image {
-            display: none;
-        }
+    // introduction-hero
+    .introduction-hero {
+      .contactMeBtn {
+        margin-top: 10px;
+        display: block;
+      }
     }
+
+    .hero-image {
+      display: none;
+    }
+  }
 }
 
 // ? in media query 700 image part will show
 @media screen and (min-width: 700px) {
-    #hero-section {
-
-        // introduction-hero
-        .introduction-hero {
-            .contactMeBtn {
-                display: none;
-            }
-        }
+  #hero-section {
+    // introduction-hero
+    .introduction-hero {
+      .contactMeBtn {
+        display: none;
+      }
     }
+  }
 }
 
 @media screen and (max-width: 1107px) {
-    #hero-section {
-        flex-direction: column;
-        justify-content: center;
+  #hero-section {
+    flex-direction: column;
+    justify-content: center;
 
-        // introduction-hero
-        .introduction-hero {
-            width: 100%;
-        }
+    // introduction-hero
+    .introduction-hero {
+      width: 100%;
     }
+  }
 }
 
 @media screen and (min-width: 1107px) {
-    #hero-section {
-        .introduction-hero {
-            .contactMeBtn {
-                display: block;
-            }
-        }
+  #hero-section {
+    .introduction-hero {
+      .contactMeBtn {
+        display: block;
+      }
     }
+  }
 }
 
-
-// * set the keyframes for current work 
+// * set the keyframes for current work
 @keyframes work {
-    0% {
-        box-shadow: none;
-    }
+  0% {
+    box-shadow: none;
+  }
 }
 
 @keyframes reys {
-    0% {
-        box-shadow: 0 0 0 0px #4dff0080, 0 0 0 4px #4dff0080, 0 0 0 6px #4dff0040, 0 0 0 8px #4dff0020, 0 0 0 10px #4dff0010, 0 0 6px 12px #4dff0010;
-    }
+  0% {
+    box-shadow: 0 0 0 0px #4dff0080, 0 0 0 4px #4dff0080, 0 0 0 6px #4dff0040,
+      0 0 0 8px #4dff0020, 0 0 0 10px #4dff0010, 0 0 6px 12px #4dff0010;
+  }
 
-    50% {
-        box-shadow: 0 0 0 2px #4dff0080, 0 0 0 4px #4dff0040, 0 0 0 6px #4dff0020, 0 0 0 8px #4dff0010, 0 0 0 10px #4dff0000, 0 0 4px 10px #4dff0010;
-    }
-    100% {
-        box-shadow: 0 0 0 4px #4dff0080, 0 0 0 6px #4dff0040, 0 0 0 8px #4dff0020, 0 0 0 10px #4dff0010, 0 0 0 12px #4dff0000, 0 0 6px 12px #4dff0010;
-    }
+  50% {
+    box-shadow: 0 0 0 2px #4dff0080, 0 0 0 4px #4dff0040, 0 0 0 6px #4dff0020,
+      0 0 0 8px #4dff0010, 0 0 0 10px #4dff0000, 0 0 4px 10px #4dff0010;
+  }
+  100% {
+    box-shadow: 0 0 0 4px #4dff0080, 0 0 0 6px #4dff0040, 0 0 0 8px #4dff0020,
+      0 0 0 10px #4dff0010, 0 0 0 12px #4dff0000, 0 0 6px 12px #4dff0010;
+  }
 }

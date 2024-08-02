@@ -1,32 +1,31 @@
 @import "mixin";
 
-
-.left-part{
-    @include display(flex,start,center);
-    .title-sec-part{
-        @include display(flex,start,center);
-        font-size: 32px;
-        .sharp-shape{
-            color: #C778DD;
-        }
-        .title-sec{
-            color: #fff;
-        }
+.left-part {
+  @include display(flex, start, center);
+  .title-sec-part {
+    @include display(flex, start, center);
+    font-size: 32px;
+    .sharp-shape {
+      color: var(--secondry-color);
     }
-    .line-head{
-        margin-left: 10px;
-        width: 30vw;
-        height: 5px;
-        background-color: #C778DD;
+    .title-sec {
+      color: var(--white-color);
     }
+  }
+  .line-head {
+    margin-left: 10px;
+    width: 30vw;
+    height: 5px;
+    background-color: var(--secondry-color);
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .left-part{
-        .title-sec-part{
-            .title-sec{
-                font-size: 26px;
-            }
-        }
+  .left-part {
+    .title-sec-part {
+      .title-sec {
+        font-size: 26px;
+      }
     }
+  }
 }

@@ -1,4 +1,5 @@
 @import "fonts";
+@import "root";
 @import "mixin";
 @import "reset-css";
 @import "container";
@@ -20,16 +21,16 @@
 // projects page sass files
 @import "projectsPage";
 
-*{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #282C33;
-    color: #ABB2BF;
-    cursor: none;
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: none;
 }

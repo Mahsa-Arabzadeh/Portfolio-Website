@@ -1,117 +1,117 @@
 @import "mixin";
 
-// style to top section of projects: 
+// style to top section of projects:
 .projects-section {
-    @include display(flex, start, start);
-    gap: 48px;
-    flex-direction: column;
-    padding: 40px 0px;
+  @include display(flex, start, start);
+  gap: 48px;
+  flex-direction: column;
+  padding: 40px 0px;
 
-    .project-sec-top {
-        @include display(flex, space-between, center);
-        width: 100%;
+  .project-sec-top {
+    @include display(flex, space-between, center);
+    width: 100%;
 
-        .left-part {
-            min-width: 50%;
-        }
-
-        .view-all {
-            max-width: 40%;
-        }
+    .left-part {
+      min-width: 50%;
     }
 
-    // project main part:
-    .project-sec-main {
-        @include display(flex, center, start);
+    .view-all {
+      max-width: 40%;
+    }
+  }
+
+  // project main part:
+  .project-sec-main {
+    @include display(flex, center, start);
+    gap: 16px;
+    overflow: hidden;
+    width: 100%;
+
+    .card-project {
+      @include display(flex, center, center);
+      flex-direction: column;
+      border: 1px solid var(--text-color);
+      transition: all 1s;
+      max-width: 100%;
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
+
+      &:hover {
+        background-color: var(--secondry-low);
+      }
+
+      .project-banner {
+        height: 200px;
+        max-width: 100%;
+      }
+
+      .tools-project {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid var(--text-color);
+      }
+
+      .description-title {
+        max-width: 100%;
+      }
+
+      .description-project {
+        @include display(flex, center, center);
+        flex-direction: column;
         gap: 16px;
-        overflow: hidden;
-        width: 100%;
+        padding: 16px;
+        max-width: 100%;
 
-        .card-project {
-            @include display(flex, center, center);
-            flex-direction: column;
-            border: 1px solid #ABB2BF;
-            transition: all 1s;
-            max-width: 100%;
-
-            &:nth-child(n+4) {
-                display: none;
-            }
-
-            &:hover {
-               background-color: #c778dd15;
-            }
-
-            .project-banner {
-                height: 200px;
-                max-width: 100%;
-            }
-
-            .tools-project {
-                width: 100%;
-                padding: 8px;
-                border: 1px solid #ABB2BF;
-            }
-
-            .description-title {
-                max-width: 100%;
-            }
-
-            .description-project {
-                @include display(flex, center, center);
-                flex-direction: column;
-                gap: 16px;
-                padding: 16px;
-                max-width: 100%;
-
-                .description-title {
-                    font-size: 24px;
-                    color: #fff;
-                    width: 300px;
-                }
-
-                .btn-part {
-                    @include display(flex, start, center);
-                    gap: 16px;
-                    max-width: 100%;
-
-                    * {
-                        width: 100%;
-                    }
-                }
-            }
+        .description-title {
+          font-size: 24px;
+          color: var(--white-color);
+          width: 300px;
         }
+
+        .btn-part {
+          @include display(flex, start, center);
+          gap: 16px;
+          max-width: 100%;
+
+          * {
+            width: 100%;
+          }
+        }
+      }
     }
+  }
 }
 
-// ? swiper styles 
+// ? swiper styles
 .swiper {
-    width: 240px;
-    height: 320px;
+  width: 240px;
+  height: 320px;
 }
 
 .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .swiper-slide:nth-child(1n) {
-    background-color: rgb(206, 17, 17);
+  background-color: rgb(206, 17, 17);
 }
 
 @media screen and (max-width: 900px) {
-    .projects-section{
-        .project-sec-top{
-            .view-all{
-                img{
-                    max-width: 17vh;
-                }
-            }
+  .projects-section {
+    .project-sec-top {
+      .view-all {
+        img {
+          max-width: 17vh;
         }
+      }
     }
+  }
 }
