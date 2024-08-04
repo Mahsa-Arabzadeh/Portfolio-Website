@@ -90,7 +90,7 @@ export default function mainProjects() {
 
   const mainProject = domGenerator({
     tag: "div",
-    attributes: { class: "project-sec-main swiper-container mySwiper2" }, // Add swiper-container
+    attributes: { class: "project-sec-main swiper mySwiper" },
     children: [
       {
         tag: "div",
@@ -114,22 +114,12 @@ export default function mainProjects() {
   // Initialize Swiper
   setTimeout(() => {
     const swiper = new Swiper(".mySwiper", {
-      loop: true,
+      slidesPerView: "auto",
       spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-
-    const swiper2 = new Swiper(".mySwiper2", {
       loop: true,
-      spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiper,
       },
     });
   }, 0); // Delay to ensure DOM is ready

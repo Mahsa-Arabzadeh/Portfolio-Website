@@ -16,16 +16,15 @@
     }
 
     .view-all {
-      max-width: 40%;
+      padding: 5px;
+      background: var(--primary-color);
     }
   }
 
   // project main part:
   .project-sec-main {
-    @include display(flex, center, start);
     gap: 16px;
     width: 100%;
-    overflow: hidden;
 
     .card-project {
       @include display(flex, center, center);
@@ -44,7 +43,7 @@
 
       .project-banner {
         height: 200px;
-        max-width: 100%;
+        width: 100%;
       }
 
       .tools-project {
@@ -85,61 +84,21 @@
 }
 
 // ? swiper styles
-// .swiper {
-//   width: 60%;
-//   height: 60%;
-// }
-
-// .swiper-slide {
-// }
-
-// #slide {
-//   max-width: 300px;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .swiper {
-//   width: 100%;
-//   height: 300px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// .swiper-slide {
-//   background-size: cover;
-//   background-position: center;
-// }
-
-// .mySwiper2 {
-//   height: 80%;
-//   width: 100%;
-// }
-
-// .mySwiper {
-//   height: 20%;
-//   box-sizing: border-box;
-//   padding: 10px 0;
-// }
-
-// .mySwiper .swiper-slide {
-//   width: 25%;
-//   height: 100%;
-//   opacity: 0.4;
-// }
-
-// .mySwiper .swiper-slide-thumb-active {
-//   opacity: 1;
-// }
-
-.swiper-slide > img {
-  display: block;
+.swiper {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.swiper-slide {
+  width: 365px;
+}
+
+@media screen and (min-width: 700px) {
+  .projects-section {
+    .project-sec-top {
+      .view-all {
+        max-width: 70%;
+      }
+    }
+  }
 }
