@@ -14,6 +14,7 @@ export default function button(props) {
     disable,
     eventListeners,
     type,
+    target,
     download,
   } = props;
 
@@ -21,6 +22,7 @@ export default function button(props) {
     class: `btn-default ${btnClass}`,
     href: anchorLink ?? "#",
     type: type,
+    target: target,
   };
 
   if (disable) {
@@ -31,22 +33,27 @@ export default function button(props) {
   }
 
   return domGenerator({
-    tag: "a",
-    attributes,
-    eventListeners,
-    dataAttributes: { size: btnSize, shape: shape },
+    tag: "button",
     children: [
       {
-        tag: "img",
-        attributes: { src: startImg ?? "" },
-      },
-      {
-        tag: "span",
-        properties: { textContent: textContent },
-      },
-      {
-        tag: "img",
-        attributes: { src: endImg ?? "" },
+        tag: "a",
+        attributes,
+        eventListeners,
+        dataAttributes: { size: btnSize, shape: shape },
+        children: [
+          {
+            tag: "img",
+            attributes: { src: startImg ?? "" },
+          },
+          {
+            tag: "span",
+            properties: { textContent: textContent },
+          },
+          {
+            tag: "img",
+            attributes: { src: endImg ?? "" },
+          },
+        ],
       },
     ],
   });

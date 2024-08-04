@@ -24,8 +24,8 @@
   .project-sec-main {
     @include display(flex, center, start);
     gap: 16px;
-    overflow: hidden;
     width: 100%;
+    overflow: hidden;
 
     .card-project {
       @include display(flex, center, center);
@@ -85,33 +85,61 @@
 }
 
 // ? swiper styles
-.swiper {
-  width: 240px;
-  height: 320px;
-}
+// .swiper {
+//   width: 60%;
+//   height: 60%;
+// }
 
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-}
+// .swiper-slide {
+// }
 
-.swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
-}
+// #slide {
+//   max-width: 300px;
+// }
 
-@media screen and (max-width: 900px) {
-  .projects-section {
-    .project-sec-top {
-      .view-all {
-        img {
-          max-width: 17vh;
-        }
-      }
-    }
-  }
+// .swiper-slide img {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// .swiper {
+//   width: 100%;
+//   height: 300px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// .swiper-slide {
+//   background-size: cover;
+//   background-position: center;
+// }
+
+// .mySwiper2 {
+//   height: 80%;
+//   width: 100%;
+// }
+
+// .mySwiper {
+//   height: 20%;
+//   box-sizing: border-box;
+//   padding: 10px 0;
+// }
+
+// .mySwiper .swiper-slide {
+//   width: 25%;
+//   height: 100%;
+//   opacity: 0.4;
+// }
+
+// .mySwiper .swiper-slide-thumb-active {
+//   opacity: 1;
+// }
+
+.swiper-slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

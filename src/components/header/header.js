@@ -7,6 +7,8 @@ import logoGenerator from "../logoGenerator/logoGenerator";
 import sideBar from "../sideBar/renderSideBar";
 
 export default function headerGenerator() {
+  let isOpen = false;
+
   return domGenerator({
     tag: "header",
     attributes: { id: "header" },
@@ -28,8 +30,16 @@ export default function headerGenerator() {
         tag: "img",
         attributes: { class: "side-bar-icon", src: "/images/Frame 60.svg" },
         eventListeners: {
-          click: () => {
-            document.body.prepend(sideBar());
+          click: (e) => {
+            isOpen = !isOpen;
+            e.stopPropagation();
+            const sidebar = document.querySelector(".side-bar");
+
+            if (isOpen) {
+              sidebar.setAttribute("id", "open");
+            } else {
+              sidebar.removeAttribute("id");
+            }
           },
         },
       },

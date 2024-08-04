@@ -8,19 +8,12 @@ import Swiper from "swiper";
 // import Swiper styles
 import "swiper/css";
 
-// function swiperCard() {
-//    new Swiper(".mySwiper", {
-//     effect: "cards",
-//     grabCursor: true,
-//   });
-// }
-
 export function cards(props) {
-  let { bannerProject, tools, title, paragraph } = props;
+  let { bannerProject, tools, title, paragraph, liveLink, githubLink } = props;
 
   return domGenerator({
     tag: "div",
-    attributes: { class: "card-project" },
+    attributes: { class: "card-project swiper-slide", id: "slide" },
     children: [
       {
         tag: "img",
@@ -57,6 +50,8 @@ export function cards(props) {
                   shape: "primary-border",
                   btnSize: "small",
                   endImg: "/images/Live _~_.svg",
+                  anchorLink: liveLink,
+                  target: "_blank",
                 }),
               },
               {
@@ -64,6 +59,8 @@ export function cards(props) {
                   shape: "secondry-border",
                   btnSize: "small",
                   endImg: "/images/Live _~git_.svg",
+                  anchorLink: githubLink,
+                  target: "_blank",
                 }),
               },
             ],
@@ -76,12 +73,14 @@ export function cards(props) {
 
 export default function mainProjects() {
   const cardsTag = projects.map((data) => {
-    let { bannerProject, tools, title, paragraph } = data;
+    let { bannerProject, tools, title, paragraph, liveLink, githubLink } = data;
     const card = cards({
       bannerProject,
       tools,
       title,
       paragraph,
+      liveLink,
+      githubLink,
     });
 
     return {
@@ -89,11 +88,51 @@ export default function mainProjects() {
     };
   });
 
-  return domGenerator({
+  const mainProject = domGenerator({
     tag: "div",
-    attributes: { class: "project-sec-main" },
-    children: cardsTag.map((item) => ({
-      tag: item.tag,
-    })),
+    attributes: { class: "project-sec-main swiper-container mySwiper2" }, // Add swiper-container
+    children: [
+      {
+        tag: "div",
+        attributes: { class: "swiper-wrapper" }, // Add swiper-wrapper
+        children: cardsTag.map((item) => ({
+          tag: item.tag,
+        })),
+      },
+      // Add navigation buttons if needed
+      {
+        tag: "div",
+        attributes: { class: "swiper-button-next" },
+      },
+      {
+        tag: "div",
+        attributes: { class: "swiper-button-prev" },
+      },
+    ],
   });
+
+  // Initialize Swiper
+  setTimeout(() => {
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    const swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  }, 0); // Delay to ensure DOM is ready
+
+  return mainProject;
 }

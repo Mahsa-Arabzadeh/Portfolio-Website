@@ -10,6 +10,10 @@ const dataItemNav = [
     sectionAddress: ".projects-section",
   },
   {
+    textItem: "skills",
+    sectionAddress: ".skill-section",
+  },
+  {
     textItem: "about-me",
     sectionAddress: ".about-section",
   },

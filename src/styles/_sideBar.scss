@@ -1,12 +1,22 @@
 @import "mixin";
 
+#open {
+  display: block !important;
+}
+
+#close {
+  display: none !important;
+}
+
 .side-bar {
-  background-color: var(--primary-color);
+  background-color: #282c335a;
+  backdrop-filter: blur(13px);
+  box-shadow: 1px 1px 10px 2px #232527a3;
   position: fixed;
   height: 100vh;
-  width: 50vw;
+  width: 60vw;
   z-index: 1100;
-  display: none;
+  display: none !important;
   animation: 1s moveSidebar;
   #nav-bar {
     .li-nav {
@@ -26,34 +36,6 @@
       }
     }
   }
-}
-
-.overlay {
-  display: none;
-  /* Initially hide the overlay */
-  position: fixed;
-  /* Fixed positioning */
-  top: 0;
-  /* Position from the top */
-  left: 0;
-  /* Position from the left */
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent black background */
-  backdrop-filter: blur(5px);
-  /* Blur effect */
-  z-index: 2;
-  /* Stack order, ensure overlay appears above other content */
-}
-
-// * close the sidebar
-.hide-sidebar {
-  // display: none;
-  background-color: rgb(157, 255, 0);
-  opacity: 0;
 }
 
 // * media query

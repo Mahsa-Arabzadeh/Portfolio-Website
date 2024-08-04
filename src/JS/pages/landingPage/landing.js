@@ -12,9 +12,10 @@ import footer from "../../../components/footer/footer";
 import { append } from "../../render";
 import mouseMove from "../../../components/mouseMove/mouseMove";
 import "../../../styles/main.scss";
+import sideBar from "../../../components/sideBar/renderSideBar";
 
 document.addEventListener("DOMContentLoaded", function () {
-  prepend(headerGenerator());
+  prepend(headerGenerator(), sideBar());
 
   render(
     heroSection(),
