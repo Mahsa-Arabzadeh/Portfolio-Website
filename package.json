@@ -14,13 +14,13 @@
   "devDependencies": {
     "@emailjs/browser": "^4.3.3",
     "axios": "^1.7.2",
+    "gh-pages": "^6.1.1",
     "sass": "^1.77.0",
     "sweetalert2": "^11.11.0",
     "swiper": "^11.1.4",
     "vite": "^5.2.11"
   },
   "dependencies": {
-    "dom-generator": "^1.1.7",
-    "gh-pages": "^6.1.1"
+    "dom-generator": "^1.1.7"
   }
 }
