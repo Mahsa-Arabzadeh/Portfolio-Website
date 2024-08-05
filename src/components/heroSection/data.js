@@ -13,7 +13,7 @@ const heroData = [
   },
   {
     skill: "Front-End Developer",
-    text: "He crafts responsive websites where technologies meet creativity He crafts responsive websites where technologies meet creativity He crafts responsive websites where technologies meet creativity",
+    text: "I am a passionate Front-End Developer with a love for creating intuitive, responsive user interfaces.Let’s build something amazing together!  ",
     colorPurple: "color-purple",
   },
 ];
