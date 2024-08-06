@@ -1,11 +1,11 @@
 export const projects = [
   {
-    bannerProject: "./images/project1.png",
-    tools: "Express css Node.js",
-    title: "Kahoot Answers Viewer",
-    paragraph: "Get answers to your kahoot quiz",
-    liveLink: "",
-    githubLink: "",
+    bannerProject: "./images/tonrow-platform.PNG",
+    tools: "Javascript Sass Vite",
+    title: "Tonrow-Platform",
+    paragraph: "A landing page of tonrow project, an ambassador request system",
+    liveLink: "https://mahsa-arabzadeh.github.io/Tonrow-Landing/",
+    githubLink: "https://github.com/Mahsa-Arabzadeh/Tonrow-Landing",
   },
   {
     bannerProject: "./images/Captfdfdafdure.PNG",
@@ -13,7 +13,8 @@ export const projects = [
     title: "Form-Validation",
     paragraph: "Checking if you have filled out the forms or not",
     liveLink: "",
-    githubLink: "",
+    githubLink:
+      "https://github.com/Mahsa-Arabzadeh/React-Form-Validation/tree/master",
   },
   {
     bannerProject: "./images/Captufdsafsafre.PNG",
