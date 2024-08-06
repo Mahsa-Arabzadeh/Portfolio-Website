@@ -13,8 +13,7 @@ export const projects = [
     title: "Form-Validation",
     paragraph: "Checking if you have filled out the forms or not",
     liveLink: "",
-    githubLink:
-      "https://vscode.dev/github/Mahsa-Arabzadeh/React-Form-Validation",
+    githubLink: "",
   },
   {
     bannerProject: "./images/Captufdsafsafre.PNG",
@@ -22,7 +21,7 @@ export const projects = [
     title: "Travel List",
     paragraph: "Packing travel luggage and choosing what items to pack",
     liveLink: "",
-    githubLink: "https://vscode.dev/github.com/React-Territory/Travel-List",
+    githubLink: "https://github.com/React-Territory/Travel-List",
   },
 ];
 
