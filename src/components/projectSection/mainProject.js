@@ -9,7 +9,15 @@ import Swiper from "swiper";
 import "swiper/css";
 
 export function cards(props) {
-  let { bannerProject, tools, title, paragraph, liveLink, githubLink } = props;
+  let {
+    bannerProject,
+    tools,
+    title,
+    paragraph,
+    liveLink,
+    githubLink,
+    disable,
+  } = props;
 
   return domGenerator({
     tag: "div",
@@ -52,6 +60,7 @@ export function cards(props) {
                   endImg: "./images/Live _~_.svg",
                   anchorLink: liveLink,
                   target: "_blank",
+                  btnClass: "",
                 }),
               },
               {
@@ -61,6 +70,7 @@ export function cards(props) {
                   endImg: "./images/Live _~git_.svg",
                   anchorLink: githubLink,
                   target: "_blank",
+                  btnClass: "",
                 }),
               },
             ],
@@ -73,7 +83,15 @@ export function cards(props) {
 
 export default function mainProjects() {
   const cardsTag = projects.map((data) => {
-    let { bannerProject, tools, title, paragraph, liveLink, githubLink } = data;
+    let {
+      bannerProject,
+      tools,
+      title,
+      paragraph,
+      liveLink,
+      githubLink,
+      disable,
+    } = data;
     const card = cards({
       bannerProject,
       tools,
@@ -81,6 +99,7 @@ export default function mainProjects() {
       paragraph,
       liveLink,
       githubLink,
+      disable,
     });
 
     return {

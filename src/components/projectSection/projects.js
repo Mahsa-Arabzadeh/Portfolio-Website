@@ -22,11 +22,12 @@ export default function projectSection() {
               startImg: "./images/View all ~~_.svg",
               btnSize: "large",
               btnClass: "view-all",
-              eventListeners: {
-                click: () => {
-                  window.location.href = "/projects.html";
-                },
-              },
+              anchorLink: "https://github.com/Mahsa-Arabzadeh",
+              // eventListeners: {
+              //   click: () => {
+              //     window.location.href = "/projects.html";
+              //   },
+              // },
             }),
           },
         ],

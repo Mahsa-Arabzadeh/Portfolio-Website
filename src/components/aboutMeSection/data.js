@@ -5,11 +5,11 @@ export const aboutMeData = [
   [
     {
       paragraph:
-        "I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
+        "I am a front-end developer based in Bushehr, Iran, with a passion for creating intuitive and visually appealing user interfaces. My enthusiasm for learning new technologies and improving user experiences drives me to stay up-to-date with the latest industry trends ",
     },
     {
       paragraph:
-        "Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.",
+        "I am open to remote and on-site collaborations, ready to contribute my expertise to achieve outstanding results",
     },
   ],
 ];

@@ -2,6 +2,7 @@
 
 button {
   background-color: transparent;
+  width: fit-content;
   .btn-default {
     @include display(flex, center, center);
     background-color: transparent;
