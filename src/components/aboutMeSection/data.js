@@ -16,6 +16,6 @@ export const aboutMeData = [
 
 // profile about me part:
 export const profileAboutData = {
-  profile: "/images/Imageabout.svg",
-  shape: "/images/DotsShape.svg",
+  profile: "./images/Imageabout.svg",
+  shape: "./images/DotsShape.svg",
 };
