@@ -28,7 +28,7 @@ export default function headerGenerator() {
       },
       {
         tag: "img",
-        attributes: { class: "side-bar-icon", src: "/images/Frame 60.svg" },
+        attributes: { class: "side-bar-icon", src: "./images/Frame 60.svg" },
         eventListeners: {
           click: (e) => {
             isOpen = !isOpen;
