@@ -19,7 +19,7 @@ export default function projectSection() {
           },
           {
             tag: button({
-              startImg: "/images/View all ~~_.svg",
+              startImg: "./images/View all ~~_.svg",
               btnSize: "large",
               btnClass: "view-all",
               eventListeners: {

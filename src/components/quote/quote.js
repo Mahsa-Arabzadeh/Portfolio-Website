@@ -28,7 +28,7 @@ export default function randomQuote(randomText, author) {
                   tag: "img",
                   attributes: {
                     class: "quote-svg-top",
-                    src: "/images/quote.svg",
+                    src: "./images/quote.svg",
                   },
                 },
                 {
@@ -49,7 +49,7 @@ export default function randomQuote(randomText, author) {
                   tag: "img",
                   attributes: {
                     class: "quote-svg-bottom",
-                    src: "/images/quote.svg",
+                    src: "./images/quote.svg",
                   },
                 },
                 {

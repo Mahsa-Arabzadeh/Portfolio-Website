@@ -49,7 +49,7 @@ export function cards(props) {
                 tag: button({
                   shape: "primary-border",
                   btnSize: "small",
-                  endImg: "/images/Live _~_.svg",
+                  endImg: "./images/Live _~_.svg",
                   anchorLink: liveLink,
                   target: "_blank",
                 }),
@@ -58,7 +58,7 @@ export function cards(props) {
                 tag: button({
                   shape: "secondry-border",
                   btnSize: "small",
-                  endImg: "/images/Live _~git_.svg",
+                  endImg: "./images/Live _~git_.svg",
                   anchorLink: githubLink,
                   target: "_blank",
                 }),

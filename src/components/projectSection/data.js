@@ -1,6 +1,6 @@
 export const projects = [
   {
-    bannerProject: "/images/project1.png",
+    bannerProject: "./images/project1.png",
     tools: "Express css Node.js",
     title: "Kahoot Answers Viewer",
     paragraph: "Get answers to your kahoot quiz",
@@ -8,7 +8,7 @@ export const projects = [
     githubLink: "",
   },
   {
-    bannerProject: "/images/Captfdfdafdure.PNG",
+    bannerProject: "./images/Captfdfdafdure.PNG",
     tools: "Sass React",
     title: "Form-Validation",
     paragraph: "Checking if you have filled out the forms or not",
@@ -17,7 +17,7 @@ export const projects = [
       "https://vscode.dev/github/Mahsa-Arabzadeh/React-Form-Validation",
   },
   {
-    bannerProject: "/images/Captufdsafsafre.PNG",
+    bannerProject: "./images/Captufdsafsafre.PNG",
     tools: "React Tailwind",
     title: "Travel List",
     paragraph: "Packing travel luggage and choosing what items to pack",

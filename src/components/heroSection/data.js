@@ -1,12 +1,12 @@
 const heroData = [
   {
-    shapePurple: "/images/LogoPurple.svg",
+    shapePurple: "./images/LogoPurple.svg",
   },
   {
-    shapeDoted: "/images/DotsShape.svg",
+    shapeDoted: "./images/DotsShape.svg",
   },
   {
-    profileImage: "/images/Imagehero.svg",
+    profileImage: "./images/Imagehero.svg",
   },
   {
     workOn: "ReactJs and Javascript",

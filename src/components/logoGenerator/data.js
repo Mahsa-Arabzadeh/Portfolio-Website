@@ -1,4 +1,4 @@
 export const logoData = {
   name: "Mah",
-  logoSvg: "/images/Logo.svg",
+  logoSvg: "./images/Logo.svg",
 };

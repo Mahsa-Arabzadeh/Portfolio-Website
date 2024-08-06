@@ -7,11 +7,11 @@ export const footerData = {
   carrier: "Front-End Developer",
   media: [
     {
-      imgSrc: "/images/Vectorgithub.svg",
+      imgSrc: "./images/Vectorgithub.svg",
       href: github,
     },
     {
-      imgSrc: "/images/Discord.svg",
+      imgSrc: "./images/Discord.svg",
       href: discord,
     },
   ],
