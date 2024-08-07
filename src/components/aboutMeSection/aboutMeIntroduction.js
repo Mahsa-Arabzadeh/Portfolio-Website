@@ -41,7 +41,7 @@ export default function aboutMeIntroduction(props) {
           shape: "primary-border",
           btnSize: "small",
           btnClass: "about-btn",
-          download: "resume.png",
+          download: "./images/Mahsa-Arabzadeh.pdf",
           anchorLink: "/images/project1.png",
         }),
       },
